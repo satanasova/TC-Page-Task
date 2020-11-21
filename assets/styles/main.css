@@ -1,15 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.2; }
+
 body {
+  height: 5510px;
   background-color: #f3f3f3;
   color: #7f8c8c; }
-  body * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.2; }
   body a {
     text-decoration: none;
     color: white; }
+  body button {
+    border: none;
+    outline: none; }
+  body h3 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 800; }
   body .hidden {
     display: none; }
   body .wrapper {
@@ -17,7 +26,7 @@ body {
     margin: auto; }
   body header {
     width: 100%;
-    background: linear-gradient(to bottom, #76c7c0 50%, #76c7c0 48%, #ececec 50%);
+    background: linear-gradient(to bottom, #76c7c0 50%, #ececec 50%);
     margin-bottom: 50px; }
     body header:after {
       content: "";
@@ -62,7 +71,8 @@ body {
           height: 30px;
           text-align: center;
           padding-top: 8px;
-          border-radius: 5px; }
+          border-radius: 5px;
+          transition: background-color 0.4s ease; }
           body header nav .nav-items li:not(:last-child):hover, body header nav .nav-items li.active {
             background-color: #62a29e !important;
             box-shadow: 0 3px #528b86;
@@ -118,20 +128,17 @@ body {
         overflow: hidden;
         margin-bottom: 25px;
         border-radius: 4px;
-        box-shadow: 0 3px #e5e6e6; }
+        box-shadow: 0 4px #e5e6e6; }
         body main .slidebar-container .slidebar .slider.project-slideshow {
           width: 1175px;
           height: 700px; }
       body main .slidebar-container .slidebar button {
         color: white;
-        border: none;
         width: 50px;
         height: 57px;
         box-shadow: 0px 3px 1px 0px #e2534b;
         position: absolute;
         top: 43%; }
-        body main .slidebar-container .slidebar button:focus {
-          outline: none; }
         body main .slidebar-container .slidebar button.prev {
           background: #e8645a url(../images/double-arrow-left.png) no-repeat 50% 50%;
           border-radius: 0 4px 4px 0;
@@ -148,7 +155,7 @@ body {
         display: inline-block;
         margin: 0 5px;
         background-color: #b0b8b9;
-        transition: background-color 0.6s ease; }
+        transition: background-color 0.4s ease; }
         body main .slidebar-container .slidebar .slidebar-nav-item:hover, body main .slidebar-container .slidebar .slidebar-nav-item.active {
           background-color: #e2534b; }
     body main .slidebar-container .small-sliders {
@@ -175,9 +182,6 @@ body {
         body main .slidebar-container .small-sliders .aside-container .sidebar-gallery {
           width: 270px; }
           body main .slidebar-container .small-sliders .aside-container .sidebar-gallery h3 {
-            text-transform: uppercase;
-            font-size: 16px;
-            font-weight: 800;
             margin-bottom: 20px;
             margin-top: 45px; }
           body main .slidebar-container .small-sliders .aside-container .sidebar-gallery .gallery {
@@ -189,4 +193,46 @@ body {
               height: 65px;
               margin-bottom: 15px;
               border-radius: 4px;
-              box-shadow: 0 3px #e5e6e6; }
+              box-shadow: 0 4px #e5e6e6; }
+  body main .infobox-container {
+    margin-top: 55px;
+    display: flex;
+    justify-content: space-between; }
+    body main .infobox-container .infobox-card {
+      width: 270px;
+      height: 310px;
+      text-align: center;
+      background-color: #f8f8f8;
+      position: relative;
+      padding: 50px 20px;
+      border-radius: 4px;
+      box-shadow: 0 4px #e5e6e6;
+      transition: background-color 0.4s ease; }
+      body main .infobox-container .infobox-card:hover {
+        background-color: white; }
+        body main .infobox-container .infobox-card:hover i {
+          color: #e8645a; }
+        body main .infobox-container .infobox-card:hover button {
+          background-color: #e8645a;
+          box-shadow: 0 4px #e2534b; }
+      body main .infobox-container .infobox-card i {
+        color: #76c7c0;
+        font-size: 60px;
+        transition: color 0.4s ease; }
+      body main .infobox-container .infobox-card h3 {
+        margin-top: 17px;
+        margin-bottom: 34px; }
+      body main .infobox-container .infobox-card p {
+        font-size: 13px; }
+      body main .infobox-container .infobox-card button {
+        font-size: 14px;
+        position: absolute;
+        bottom: -25px;
+        left: 35px;
+        width: 200px;
+        color: white;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #76c7c0;
+        box-shadow: 0 4px #62b9b0;
+        transition: all 0.4s ease; }
