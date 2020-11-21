@@ -1,0 +1,252 @@
+body {
+    background-color: #f3f3f3;
+    color: #7f8c8c;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.2;
+    }
+    a {
+        text-decoration: none;
+        color:white;
+    } 
+    .hidden {
+        display: none;
+    }  
+    .wrapper {
+        width: 1175px;
+        margin: auto;
+    }    
+    header {
+        width: 100%;
+        background: linear-gradient(to bottom, #76c7c0 50%, #76c7c0 48%, #ececec 50%);
+        margin-bottom: 50px;
+        &:after {
+            content: "";
+            height: 9px;
+            width: 100%;
+            background-image: url(../images/ruler.png);
+            position: absolute;
+            top: 71px; 
+        }
+        nav {
+            height: 80px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            .logo {
+                display: flex;
+                text-decoration: none;
+                align-items: flex-end;
+                color: white;
+                padding-left: 6px;
+                span:first-child {
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    font-weight: 700; 
+                }
+                span:nth-child(2) {
+                    font-size: 25px;
+                    align-self: flex-end;
+                    margin-left: 5px;
+                    font-weight: 300;
+                    padding-bottom: 2px;
+                }
+            }
+            .nav-items {
+                list-style: none;
+                width: 760px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 13px;
+                font-weight: 400;
+                text-transform: uppercase;
+                li {
+                    padding: 9px 20px;
+                    height: 30px;
+                    text-align: center;
+                    padding-top: 8px;
+                    border-radius: 5px;
+                    &:not(:last-child):hover, &.active {
+                        background-color: #62a29e !important;
+                        box-shadow: 0 3px #528b86;
+                        cursor: pointer;
+                    }
+                    &#portfolio {
+                        position: relative;
+                        background: url(../images/arrow-down.png) no-repeat 10px 14px;
+                        padding-left: 25px;
+                    }
+                    &#search {
+                        padding: 0;
+                        text-align: center;
+                        width: 34px;
+                        height: 31px;
+                        background: #e8645a url(../images/magnifier.png) no-repeat 50% 55%;
+                        box-shadow: 0px 2px 2px #e2534b;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+
+        }
+        .page-headline {
+            height: 80px;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            padding: 0 6px 0 9px;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 100%;
+                border-top: 12px solid #ececec;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;    
+            }
+            h1 {
+                font-size: 20px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: 12px;
+                text-transform: capitalize;
+                span:nth-child(2) {
+                    margin: 0 10px;
+                }
+            }
+
+        }
+    }
+    main {
+        .slidebar-container {
+            height: 1410px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            .slidebar {
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                .slider {
+                    display: flex;
+                    overflow: hidden;
+                    margin-bottom: 25px;
+                    border-radius: 4px;
+                    box-shadow: 0 3px #e5e6e6;
+                    &.project-slideshow {
+                        width: 1175px;
+                        height: 700px;            
+                    }
+                }
+                button {
+                    color: white;
+                    border: none;
+                    width: 50px;
+                    height: 57px;
+                    box-shadow: 0px 3px 1px 0px #e2534b;
+                    position: absolute;
+                    top: 43%;
+                    &:focus {
+                        outline: none
+                    }
+                    &.prev {
+                        background: #e8645a url(../images/double-arrow-left.png) no-repeat 50% 50%;
+                        border-radius: 0 4px 4px 0;
+                        box-shadow: -1px 3px 0px 0px #e2534b                
+                    }
+                    &.next {
+                        background: #e8645a url(../images/double-arrow-right.png) no-repeat 50% 50%;
+                        right: 0;
+                        border-radius: 4px 0px 0 4px;
+                        box-shadow: 1px 3px 0px 0px #e2534b                
+                    }
+                }
+                .slidebar-nav-item {
+                    cursor: pointer;
+                    height: 5px;
+                    width: 60px;
+                    display: inline-block;
+                    margin: 0 5px;
+                    background-color: #b0b8b9;
+                    transition: background-color 0.6s ease;
+                    &:hover, &.active {
+                        background-color: #e2534b;
+                    }
+                } 
+            }
+            .small-sliders {
+                display: flex;
+                justify-content: space-between;        
+                .slider.page-slideshow {
+                    width: 870px;
+                    height: 565px;        
+                }
+                .aside-container {
+                    width: 270px;
+                    .slidebar {
+                        .sidebar-slideshow {
+                            height: 200px;
+                            button {
+                                width: 37px;
+                                height: 40px;
+                                top: 32%;
+                                &.prev {
+                                    background: #e8645a url(../images/single-arrow-left.png) no-repeat 50% 50%;
+                                } 
+                                &.next {
+                                    background: #e8645a url(../images/single-arrow-right.png) no-repeat 50% 50%;
+                                    right: 0;                    
+                                }               
+                            }
+                                    
+                        }
+                        .slidebar-nav-item {
+                            width: 30px;
+                        }    
+                    }                    
+                    .sidebar-gallery {
+                        width: 270px;
+                        h3 {
+                            text-transform: uppercase;
+                            font-size: 16px;
+                            font-weight: 800;
+                            margin-bottom: 20px;
+                            margin-top: 45px;
+                        }
+                        .gallery {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            img {
+                                width: 70px;
+                                height: 65px;
+                                margin-bottom: 15px;
+                                border-radius: 4px;
+                                box-shadow: 0 3px #e5e6e6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
