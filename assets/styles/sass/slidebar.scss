@@ -1,35 +1,57 @@
 .slidebar-container {
-    height: 1410px; 
+    height: 1430px;
+    #project-slideshow-wrapper, #page-slideshow-wrapper {
+        position: relative;
+        button{
+            width: 50px;
+            height: 57px;
+            i {
+                font-size: 40px;
+            }
+        }
+
+    }
+    #project-slideshow-wrapper {
+        button{
+            top: calc(50% - 69px);
+        }
+    }
+    #page-slideshow-wrapper {
+        button{
+            top: calc(50% - 52px);;
+        }
+    }
     .slidebar {
         text-align: center;
         position: relative;
         overflow: hidden;
+        button {
+            color: white;
+            box-shadow: 0px 3px $red-darker;
+            position: absolute;
+            &.prev {
+                background-color: $red-primary;
+                border-radius: 0 4px 4px 0;
+                box-shadow: 0px 3px $red-darker;
+            }
+            &.next {
+                background-color: $red-primary;
+                right: 0;
+                border-radius: 4px 0px 0 4px;
+                box-shadow: 0 3px $red-darker;
+
+            }
+        }
         .slider {
             display: flex;
             overflow: hidden;
             margin-bottom: 25px;
             border-radius: 4px;
             box-shadow: $gray-shadow;
+            width: 1170px;
+            
         }
-        button {
-            color: white;
-            width: 50px;
-            height: 57px;
-            box-shadow: 0px 3px 1px 0px $red-darker;
-            position: absolute;
-            top: 43%;
-            &.prev {
-                background: $red-primary url(../images/double-arrow-left.png) no-repeat 50% 50%;
-                border-radius: 0 4px 4px 0;
-                box-shadow: -1px 3px 0px 0px $red-darker                
-            }
-            &.next {
-                background: $red-primary url(../images/double-arrow-right.png) no-repeat 50% 50%;
-                right: 0;
-                border-radius: 4px 0px 0 4px;
-                box-shadow: 1px 3px 0px 0px $red-darker                
-            }
-        }
+
         .slidebar-nav-item {
             cursor: pointer;
             height: 5px;
@@ -43,36 +65,46 @@
             }
         } 
     }
+
     .small-sliders {
         .aside-container {
             .slidebar {
-                .sidebar-slideshow {
-                    button {
-                        width: 37px;
-                        height: 40px;
-                        top: 32%;
-                        &.prev {
-                            background: $red-primary url(../images/single-arrow-left.png) no-repeat 50% 50%;
-                        } 
-                        &.next {
-                            background: $red-primary url(../images/single-arrow-right.png) no-repeat 50% 50%;
-                            right: 0;                    
-                        }               
-                    }
-                            
+                .slider-nav {
+                    .slidebar-nav-item {
+                        width: 30px;
+                    } 
+                }                
+            }  
+            .sidebar-slideshow {
+                margin-bottom: 17px;
+                button {
+                    width: 40px;
+                    height: 38px;
+                    top: calc(50% - 38px);
+                    &.prev {
+                        background-color: $red-primary;
+                    } 
+                    &.next {
+                        background-color: $red-primary;
+                        right: 0;             
+                    }  
+                    i {
+                        font-size: 30px;
+                        font-weight: bold;
+                    }                  
                 }
-                .slidebar-nav-item {
-                    width: 30px;
-                }    
-            }                    
+                        
+            }                  
             .sidebar-gallery {
                 h2 {
                     margin-bottom: 20px;
-                    margin-top: 45px;
+                    margin-top: 40px;
                 }
                 .gallery {
+                    padding-top: 7px;
                     img {
-                        margin-bottom: 15px;
+                        width: 26%;
+                        margin-bottom: 25px;
                         border-radius: 4px;
                         box-shadow: $gray-shadow;
                     }

@@ -3,14 +3,12 @@
   justify-content: space-between;
   flex-wrap: wrap; }
   .flexbox-grid .grid-1 {
-    width: 70px; }
+    width: 23%; }
+  .flexbox-grid .grid-2 {
+    width: 48%; }
   .flexbox-grid .grid-3 {
-    width: 270px; }
-  .flexbox-grid .grid-6 {
-    width: 570px; }
-  .flexbox-grid .grid-9 {
-    width: 870px; }
-  .flexbox-grid .grid-12 {
+    width: 74%; }
+  .flexbox-grid .grid-4 {
     width: 100%; }
 
 * {
@@ -42,7 +40,7 @@ body {
   body .hidden {
     display: none; }
   body .wrapper {
-    width: 1175px;
+    width: 1170px;
     margin: auto; }
   body header {
     width: 100%;
@@ -80,174 +78,226 @@ body {
           padding-bottom: 2px; }
       body header nav .nav-items {
         list-style: none;
-        width: 760px;
+        width: 780px;
         display: flex;
         justify-content: space-between;
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 400;
         text-transform: uppercase; }
         body header nav .nav-items li {
-          padding: 9px 20px;
-          height: 30px;
-          text-align: center;
-          padding-top: 8px;
-          border-radius: 5px;
-          transition: background-color 0.4s ease; }
-          body header nav .nav-items li:not(:last-child):hover, body header nav .nav-items li.active {
-            background-color: #62a29e !important;
-            box-shadow: 0 3px #528b86;
-            cursor: pointer; }
-          body header nav .nav-items li#portfolio {
-            position: relative;
-            background: url(../images/arrow-down.png) no-repeat 10px 14px;
-            padding-left: 25px; }
-          body header nav .nav-items li#search {
-            padding: 0;
-            text-align: center;
-            width: 34px;
-            height: 31px;
-            background: #e8645a url(../images/magnifier.png) no-repeat 50% 55%;
-            box-shadow: 0px 2px 2px #e2534b; }
-            body header nav .nav-items li#search:hover {
+          border-radius: 5px; }
+          body header nav .nav-items li:not(:last-child) {
+            padding: 9px 20px;
+            height: 30px;
+            padding-top: 8px;
+            transition: background-color 0.4s ease; }
+            body header nav .nav-items li:not(:last-child):hover, body header nav .nav-items li:not(:last-child).active {
+              background-color: #62a29e !important;
+              box-shadow: 0 3px #528b86;
               cursor: pointer; }
-    body header .page-headline {
-      height: 80px;
-      justify-content: space-between;
+          body header nav .nav-items li#search {
+            text-align: center;
+            width: 33px;
+            height: 30px;
+            background-color: #e8645a;
+            box-shadow: 0px 2px #e2534b;
+            position: relative;
+            top: 2px;
+            left: -3px; }
+            body header nav .nav-items li#search:hover, body header nav .nav-items li#search.active {
+              cursor: pointer; }
+            body header nav .nav-items li#search i {
+              font-size: 16px;
+              margin-top: 8px; }
+            body header nav .nav-items li#search #search-box {
+              font-size: 14px;
+              text-align: left;
+              font-family: Myriad Pro, sans-serif;
+              padding: 5px 0 0 8px;
+              text-transform: none;
+              width: 200px;
+              height: 40px;
+              background-color: white;
+              border: 5px solid #e2534b;
+              border-radius: 4px;
+              position: absolute;
+              left: -166px;
+              bottom: -54px;
+              z-index: 1; }
+              body header nav .nav-items li#search #search-box:before {
+                content: "";
+                position: absolute;
+                top: -10px;
+                right: 5px;
+                border-bottom: 7px solid #e2534b;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent; }
+          body header nav .nav-items li#portfolio i {
+            color: white;
+            position: relative;
+            left: -2px; }
+  body .page-headline {
+    height: 80px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 7px 6px 0 9px;
+    position: relative; }
+    body .page-headline:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 100%;
+      border-top: 12px solid #ececec;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent; }
+    body .page-headline h1 {
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase; }
+    body .page-headline p {
+      font-size: 12px;
+      text-transform: capitalize; }
+      body .page-headline p span:nth-child(2) {
+        margin: 0 5px; }
+
+main .slidebar-container {
+  height: 1430px; }
+  main .slidebar-container #project-slideshow-wrapper, main .slidebar-container #page-slideshow-wrapper {
+    position: relative; }
+    main .slidebar-container #project-slideshow-wrapper button, main .slidebar-container #page-slideshow-wrapper button {
+      width: 50px;
+      height: 57px;
+      top: calc(50% - 69px); }
+      main .slidebar-container #project-slideshow-wrapper button i, main .slidebar-container #page-slideshow-wrapper button i {
+        font-size: 40px; }
+  main .slidebar-container #project-slideshow-wrapper button {
+    top: calc(50% - 69px); }
+  main .slidebar-container #page-slideshow-wrapper button {
+    top: calc(50% - 52px); }
+  main .slidebar-container .slidebar {
+    text-align: center;
+    position: relative;
+    overflow: hidden; }
+    main .slidebar-container .slidebar button {
+      color: white;
+      box-shadow: 0px 3px #e2534b;
+      position: absolute; }
+      main .slidebar-container .slidebar button.prev {
+        background-color: #e8645a;
+        border-radius: 0 4px 4px 0;
+        box-shadow: 0px 3px #e2534b; }
+      main .slidebar-container .slidebar button.next {
+        background-color: #e8645a;
+        right: 0;
+        border-radius: 4px 0px 0 4px;
+        box-shadow: 0 3px #e2534b; }
+    main .slidebar-container .slidebar .slider {
       display: flex;
-      align-items: center;
-      padding: 0 6px 0 9px;
-      position: relative; }
-      body header .page-headline:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 100%;
-        border-top: 12px solid #ececec;
-        border-left: 12px solid transparent;
-        border-right: 12px solid transparent; }
-      body header .page-headline h1 {
-        font-size: 20px;
-        font-weight: 600;
-        text-transform: uppercase; }
-      body header .page-headline p {
-        font-size: 12px;
-        text-transform: capitalize; }
-        body header .page-headline p span:nth-child(2) {
-          margin: 0 10px; }
-  body main .slidebar-container {
-    height: 1410px; }
-    body main .slidebar-container .slidebar {
-      text-align: center;
-      position: relative;
-      overflow: hidden; }
-      body main .slidebar-container .slidebar .slider {
-        display: flex;
-        overflow: hidden;
-        margin-bottom: 25px;
-        border-radius: 4px;
-        box-shadow: 0 4px #e5e6e6; }
-      body main .slidebar-container .slidebar button {
-        color: white;
-        width: 50px;
-        height: 57px;
-        box-shadow: 0px 3px 1px 0px #e2534b;
-        position: absolute;
-        top: 43%; }
-        body main .slidebar-container .slidebar button.prev {
-          background: #e8645a url(../images/double-arrow-left.png) no-repeat 50% 50%;
-          border-radius: 0 4px 4px 0;
-          box-shadow: -1px 3px 0px 0px #e2534b; }
-        body main .slidebar-container .slidebar button.next {
-          background: #e8645a url(../images/double-arrow-right.png) no-repeat 50% 50%;
-          right: 0;
-          border-radius: 4px 0px 0 4px;
-          box-shadow: 1px 3px 0px 0px #e2534b; }
-      body main .slidebar-container .slidebar .slidebar-nav-item {
-        cursor: pointer;
-        height: 5px;
-        width: 60px;
-        display: inline-block;
-        margin: 0 5px;
-        background-color: #b0b8b9;
-        transition: background-color 0.4s ease; }
-        body main .slidebar-container .slidebar .slidebar-nav-item:hover, body main .slidebar-container .slidebar .slidebar-nav-item.active {
-          background-color: #e2534b; }
-    body main .slidebar-container .small-sliders .aside-container .slidebar .sidebar-slideshow button {
-      width: 37px;
-      height: 40px;
-      top: 32%; }
-      body main .slidebar-container .small-sliders .aside-container .slidebar .sidebar-slideshow button.prev {
-        background: #e8645a url(../images/single-arrow-left.png) no-repeat 50% 50%; }
-      body main .slidebar-container .small-sliders .aside-container .slidebar .sidebar-slideshow button.next {
-        background: #e8645a url(../images/single-arrow-right.png) no-repeat 50% 50%;
-        right: 0; }
-    body main .slidebar-container .small-sliders .aside-container .slidebar .slidebar-nav-item {
-      width: 30px; }
-    body main .slidebar-container .small-sliders .aside-container .sidebar-gallery h2 {
-      margin-bottom: 20px;
-      margin-top: 45px; }
-    body main .slidebar-container .small-sliders .aside-container .sidebar-gallery .gallery img {
-      margin-bottom: 15px;
-      border-radius: 4px;
-      box-shadow: 0 4px #e5e6e6; }
-  body main .infobox-container {
-    margin-top: 55px; }
-    body main .infobox-container .infobox-card {
-      height: 310px;
-      text-align: center;
-      background-color: #f8f8f8;
-      position: relative;
-      padding: 50px 20px;
+      overflow: hidden;
+      margin-bottom: 25px;
       border-radius: 4px;
       box-shadow: 0 4px #e5e6e6;
+      width: 1170px; }
+    main .slidebar-container .slidebar .slidebar-nav-item {
+      cursor: pointer;
+      height: 5px;
+      width: 60px;
+      display: inline-block;
+      margin: 0 5px;
+      background-color: #b0b8b9;
       transition: background-color 0.4s ease; }
-      body main .infobox-container .infobox-card:hover {
-        background-color: white; }
-        body main .infobox-container .infobox-card:hover i {
-          color: #e8645a; }
-        body main .infobox-container .infobox-card:hover button {
-          background-color: #e8645a;
-          box-shadow: 0 4px #e2534b; }
-      body main .infobox-container .infobox-card i {
-        color: #76c7c0;
-        font-size: 60px;
-        transition: color 0.4s ease; }
-      body main .infobox-container .infobox-card h2 {
-        margin-top: 17px;
-        margin-bottom: 34px; }
-      body main .infobox-container .infobox-card p {
-        font-size: 13px; }
-      body main .infobox-container .infobox-card button {
-        font-size: 14px;
-        position: absolute;
-        bottom: -25px;
-        left: 35px;
-        width: 200px;
-        color: white;
-        height: 50px;
-        border-radius: 4px;
-        background-color: #76c7c0;
-        box-shadow: 0 4px #62b9b0;
-        transition: all 0.4s ease; }
-        body main .infobox-container .infobox-card button:hover {
-          cursor: pointer; }
-  body main .accordion-container {
-    margin-top: 110px; }
-    body main .accordion-container .acc-list .acc-item {
-      height: 50px;
-      overflow: hidden; }
-  body main .hr {
-    height: 3px;
-    background-color: #e5e6e6;
+      main .slidebar-container .slidebar .slidebar-nav-item:hover, main .slidebar-container .slidebar .slidebar-nav-item.active {
+        background-color: #e2534b; }
+  main .slidebar-container .small-sliders .aside-container .slidebar .slider-nav .slidebar-nav-item {
+    width: 30px; }
+  main .slidebar-container .small-sliders .aside-container .sidebar-slideshow {
+    margin-bottom: 17px; }
+    main .slidebar-container .small-sliders .aside-container .sidebar-slideshow button {
+      width: 40px;
+      height: 38px;
+      top: calc(50% - 38px); }
+      main .slidebar-container .small-sliders .aside-container .sidebar-slideshow button.prev {
+        background-color: #e8645a; }
+      main .slidebar-container .small-sliders .aside-container .sidebar-slideshow button.next {
+        background-color: #e8645a;
+        right: 0; }
+      main .slidebar-container .small-sliders .aside-container .sidebar-slideshow button i {
+        font-size: 30px;
+        font-weight: bold; }
+  main .slidebar-container .small-sliders .aside-container .sidebar-gallery h2 {
+    margin-bottom: 20px;
     margin-top: 40px; }
-  body main .grid-container {
-    margin-top: 50px; }
-    body main .grid-container > div:not(:nth-of-type(4)), body main .grid-container > div:not(:nth-of-type(5)) {
-      margin-bottom: 80px; }
-    body main .grid-container > div:nth-of-type(4), body main .grid-container > div:nth-of-type(5) {
-      margin-bottom: 60px; }
-    body main .grid-container > div p {
+  main .slidebar-container .small-sliders .aside-container .sidebar-gallery .gallery {
+    padding-top: 7px; }
+    main .slidebar-container .small-sliders .aside-container .sidebar-gallery .gallery img {
+      width: 26%;
+      margin-bottom: 25px;
+      border-radius: 4px;
+      box-shadow: 0 4px #e5e6e6; }
+
+main .infobox-container {
+  margin-top: 30px; }
+  main .infobox-container .infobox-card {
+    height: 310px;
+    text-align: center;
+    background-color: #f8f8f8;
+    position: relative;
+    padding: 50px 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px #e5e6e6;
+    transition: background-color 0.4s ease; }
+    main .infobox-container .infobox-card:hover {
+      background-color: white; }
+      main .infobox-container .infobox-card:hover i {
+        color: #e8645a; }
+      main .infobox-container .infobox-card:hover button {
+        background-color: #e8645a;
+        box-shadow: 0 4px #e2534b; }
+    main .infobox-container .infobox-card i {
+      color: #76c7c0;
+      font-size: 60px;
+      transition: color 0.4s ease; }
+    main .infobox-container .infobox-card h2 {
+      margin-top: 12px;
+      margin-bottom: 27px; }
+    main .infobox-container .infobox-card p {
+      font-size: 12px;
+      line-height: 1.6; }
+    main .infobox-container .infobox-card button {
       font-size: 14px;
-      text-align: left;
-      padding-right: 19px;
-      margin-top: 20px; }
+      position: absolute;
+      bottom: -25px;
+      left: calc(50% - 100px);
+      width: 200px;
+      color: white;
+      height: 50px;
+      border-radius: 4px;
+      background-color: #76c7c0;
+      box-shadow: 0 4px #62b9b0;
+      transition: all 0.4s ease; }
+      main .infobox-container .infobox-card button:hover {
+        cursor: pointer; }
+
+main .accordion-container {
+  margin-top: 110px; }
+  main .accordion-container .acc-list .acc-item {
+    height: 50px;
+    overflow: hidden; }
+
+main .hr {
+  height: 3px;
+  background-color: #e5e6e6;
+  margin-top: 40px; }
+
+main .grid-container {
+  margin-top: 50px; }
+  main .grid-container > div:not(:nth-of-type(4)), main .grid-container > div:not(:nth-of-type(5)) {
+    margin-bottom: 80px; }
+  main .grid-container > div:nth-of-type(4), main .grid-container > div:nth-of-type(5) {
+    margin-bottom: 60px; }
+  main .grid-container > div p {
+    font-size: 14px;
+    text-align: left;
+    padding-right: 19px;
+    margin-top: 20px; }

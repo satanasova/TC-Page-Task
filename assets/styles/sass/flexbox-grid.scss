@@ -3,18 +3,15 @@
     justify-content: space-between;
     flex-wrap: wrap;
     .grid-1 {
-        width: 70px;
+        width: 23%;
+    }
+    .grid-2 {
+        width: 48%;
     }
     .grid-3 {
-        width: 270px;
+        width: 74%;
     }
-    .grid-6 {
-        width: 570px;
-    }
-    .grid-9 {
-        width: 870px;
-    }
-    .grid-12 {
+    .grid-4 {
         width: 100%;
     }
 }
