@@ -1,0 +1,55 @@
+.infobox-container {
+    margin-top: 55px;
+    display: flex;
+    justify-content: space-between;
+    .infobox-card {
+        width: 270px;
+        height: 310px;
+        text-align: center;
+        background-color: $gray-primary;
+        position: relative;
+        padding: 50px 20px;
+        border-radius: 4px;
+        box-shadow: $gray-shadow;
+        transition: background-color 0.4s ease;
+        &:hover {
+            background-color: white;
+            & i {
+                color: $red-primary;
+            }
+            & button{
+                background-color: $red-primary;
+                box-shadow: 0 4px $red-darker;
+            }
+        }
+        i {
+            color: $green-primary;
+            font-size: 60px;
+            transition: color 0.4s ease;
+        }
+        h3 {
+            margin-top: 17px;
+            margin-bottom: 34px;
+        }
+        p {
+            font-size: 13px;
+        }
+        button {
+            font-size: 14px;
+            position: absolute;
+            bottom: -25px;
+            left: 35px;
+            width: 200px;
+            color: white;
+            height: 50px;
+            border-radius: 4px;
+            background-color: $green-primary;
+            box-shadow: 0 4px $green-darker;
+            transition: all 0.4s ease;
+            &:hover {
+                cursor: pointer;
+            }
+            
+        }
+    }
+}

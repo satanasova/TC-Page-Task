@@ -1,0 +1,15 @@
+.accordion-container {
+    margin-top: 110px;
+    display: flex;
+    justify-content: space-between;
+    .acc-list {
+        width: 270px;
+        &.left {
+            flex-grow: 3;
+        }
+        .acc-item {
+            height: 50px;
+            overflow: hidden;
+        }
+    }
+}
