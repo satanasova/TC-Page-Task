@@ -1,7 +1,9 @@
 .slidebar-container {
     height: 1430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
     #project-slideshow-wrapper, #page-slideshow-wrapper {
-        position: relative;
         button{
             width: 50px;
             height: 57px;
@@ -9,7 +11,6 @@
                 font-size: 40px;
             }
         }
-
     }
     #project-slideshow-wrapper {
         button{
@@ -25,33 +26,30 @@
         text-align: center;
         position: relative;
         overflow: hidden;
-        button {
-            color: white;
-            box-shadow: 0px 3px $red-darker;
-            position: absolute;
-            &.prev {
-                background-color: $red-primary;
-                border-radius: 0 4px 4px 0;
-                box-shadow: 0px 3px $red-darker;
-            }
-            &.next {
-                background-color: $red-primary;
-                right: 0;
-                border-radius: 4px 0px 0 4px;
-                box-shadow: 0 3px $red-darker;
-
-            }
-        }
         .slider {
             display: flex;
             overflow: hidden;
             margin-bottom: 25px;
             border-radius: 4px;
             box-shadow: $gray-shadow;
-            width: 1170px;
-            
         }
-
+        button {
+            cursor: pointer;
+            color: white;
+            box-shadow: 0px 3px 1px 0px $red-darker;
+            position: absolute;
+            &.prev {
+                background-color: $red-primary;
+                border-radius: 0 4px 4px 0;
+                box-shadow: 0px 3px $red-darker;               
+            }
+            &.next {
+                background-color: $red-primary;
+                right: 0;
+                border-radius: 4px 0px 0 4px;
+                box-shadow: 0 3px $red-darker;               
+            }
+        }
         .slidebar-nav-item {
             cursor: pointer;
             height: 5px;
@@ -65,36 +63,43 @@
             }
         } 
     }
-
     .small-sliders {
+        display: flex;
+        justify-content: space-between;  
+        .slider.page-slideshow {
+            width: 870px;
+            height: 565px;        
+        }
         .aside-container {
+            width: 270px;
             .slidebar {
+                .sidebar-slideshow {
+                    height: 200px;
+                    margin-bottom: 17px;
+                    button {
+                        width: 40px;
+                        height: 38px;
+                        top: calc(50% - 38px);
+                        &.prev {
+                            background-color: $red-primary;
+                        } 
+                        &.next {
+                            background-color: $red-primary;
+                            right: 0;             
+                        }  
+                        i {
+                            font-size: 30px;
+                            font-weight: bold;
+                        }                  
+                    }      
+                }  
                 .slider-nav {
                     .slidebar-nav-item {
                         width: 30px;
                     } 
                 }                
             }  
-            .sidebar-slideshow {
-                margin-bottom: 17px;
-                button {
-                    width: 40px;
-                    height: 38px;
-                    top: calc(50% - 38px);
-                    &.prev {
-                        background-color: $red-primary;
-                    } 
-                    &.next {
-                        background-color: $red-primary;
-                        right: 0;             
-                    }  
-                    i {
-                        font-size: 30px;
-                        font-weight: bold;
-                    }                  
-                }
-                        
-            }                  
+                
             .sidebar-gallery {
                 h2 {
                     margin-bottom: 20px;
