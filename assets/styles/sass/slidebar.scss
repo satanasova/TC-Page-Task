@@ -1,8 +1,5 @@
 .slidebar-container {
-    height: 1410px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
+    height: 1410px; 
     .slidebar {
         text-align: center;
         position: relative;
@@ -13,10 +10,6 @@
             margin-bottom: 25px;
             border-radius: 4px;
             box-shadow: $gray-shadow;
-            &.project-slideshow {
-                width: 1175px;
-                height: 700px;            
-            }
         }
         button {
             color: white;
@@ -51,17 +44,9 @@
         } 
     }
     .small-sliders {
-        display: flex;
-        justify-content: space-between;        
-        .slider.page-slideshow {
-            width: 870px;
-            height: 565px;        
-        }
         .aside-container {
-            width: 270px;
             .slidebar {
                 .sidebar-slideshow {
-                    height: 200px;
                     button {
                         width: 37px;
                         height: 40px;
@@ -81,18 +66,12 @@
                 }    
             }                    
             .sidebar-gallery {
-                width: 270px;
-                h3 {
+                h2 {
                     margin-bottom: 20px;
                     margin-top: 45px;
                 }
                 .gallery {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
                     img {
-                        width: 70px;
-                        height: 65px;
                         margin-bottom: 15px;
                         border-radius: 4px;
                         box-shadow: $gray-shadow;

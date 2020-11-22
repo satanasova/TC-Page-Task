@@ -18,7 +18,7 @@
                     <span>modus</span>
                     <span>versus</span>
             </a>
-            <div class="nav-items">
+            <ul class="nav-items">
                 <li id="home"><a href="#">home</a></li>
                 <li id="about"><a href="#">about</a></li>
                 <li id="services"><a href="#">services</a></li>
@@ -27,7 +27,7 @@
                 <li id="features"><a href="#">features</a></li>
                 <li id="contacts"><a href="#">contacts</a></li>
                 <li id="search"><a href="#"></a></li>
-            </div>
+            </ul>
         </nav>
         <div class="page-headline wrapper">
             <h1>features</h1>
@@ -39,8 +39,8 @@
         </div>
     </header>
     <main>
-        <div class="slidebar-container wrapper">
-            <div class="slidebar" id="project-slideshow-wrapper">
+        <div class="slidebar-container wrapper flexbox-grid">
+            <div class="slidebar grid-12" id="project-slideshow-wrapper">
                 <div class="slider project-slideshow">
                     <img src="assets/images/project-slideshow.png" alt="">
                     <img src="assets/images/project-slideshow.png" alt="">
@@ -53,8 +53,8 @@
                 </div>
                 <div class="slider-nav"></div>
             </div>
-            <div class="small-sliders">
-                <div class="slidebar" id="page-slideshow-wrapper">
+            <div class="small-sliders wrapper flexbox-grid grid-12">
+                <div class="slidebar grid-9" id="page-slideshow-wrapper">
                     <div class="slider page-slideshow">
                         <img src="assets/images/page-slideshow.png" alt="">
                         <img src="assets/images/page-slideshow.png" alt="">
@@ -66,7 +66,7 @@
                     </div>
                     <div class="slider-nav"></div>
                 </div>
-                <aside class="aside-container" >
+                <aside class="aside-container grid-3" >
                     <div class="slidebar" id="sidebar-slideshow-wrapper">
                         <div class="slider sidebar-slideshow">
                             <img src="assets/images/sidebar-slideshow.png" alt="">
@@ -81,100 +81,187 @@
                     </div>
                     
                     <div class="sidebar-gallery">
-                        <h3>sidebar gallery</h3>
-                        <div class="gallery">
-                            <img src="assets/images/sidebar-gallery.png" alt="">
-                            <img src="assets/images/sidebar-gallery.png" alt="">
-                            <img src="assets/images/sidebar-gallery.png" alt="">
-                            <img src="assets/images/sidebar-gallery.png" alt="">
-                            <img src="assets/images/sidebar-gallery.png" alt="">
-                            <img src="assets/images/sidebar-gallery.png" alt="">
+                        <h2>sidebar gallery</h2>
+                        <div class="gallery flexbox-grid">
+                            <img src="assets/images/sidebar-gallery.png" class="grid-1"alt="">
+                            <img src="assets/images/sidebar-gallery.png" class="grid-1"alt="">
+                            <img src="assets/images/sidebar-gallery.png" class="grid-1"alt="">
+                            <img src="assets/images/sidebar-gallery.png" class="grid-1"alt="">
+                            <img src="assets/images/sidebar-gallery.png" class="grid-1"alt="">
+                            <img src="assets/images/sidebar-gallery.png" class="grid-1"alt="">
                         </div>
                     </div>
                 </aside>
             </div>
         </div>
-        <div class="infobox-container wrapper">
-            <div class="infobox-card">
+        <div class="infobox-container wrapper flexbox-grid">
+            <div class="infobox-card grid-3">
                 <i class="fa fa-thumbs-o-up"></i>
-                <h3>suspendisse</h3>
+                <h2>suspendisse</h2>
                 <p>Quisque id tellus quis risus vehicula vehicula ut turpis. In eros nulla, placerat vitae at, vehicula ut nunc. </p>
                 <button>read more</button>
             </div>
 
-            <div class="infobox-card">
+            <div class="infobox-card grid-3">
                 <i class="fa fa-key"></i>
-                <h3>maecenas</h3>
+                <h2>maecenas</h2>
                 <p>Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
                 <button>read more</button>
             </div>
 
-            <div class="infobox-card">
+            <div class="infobox-card grid-3">
                 <i class="fa fa-flag"></i>
-                <h3>aliquam</h3>
+                <h2>aliquam</h2>
                 <p>Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non. </p>
                 <button>read more</button>
             </div>
 
-            <div class="infobox-card">
+            <div class="infobox-card grid-3">
                 <i class="fa fa-flask"></i>
-                <h3>habitasse</h3>
+                <h2>habitasse</h2>
                 <p>Astehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non.</p>
                 <button>read more</button>
             </div>
         </div>
-        <div class="accordion-container wrapper">
-            <div class="acc-list left">
-                <div class="acc-item">
+        <div class="accordion-container wrapper flexbox-grid">
+            <div class="acc-list left grid-9">
+                <div class="acc-item ">
                     <div class="title">
-                        <h3>accordion item</h3>
+                        <h2>accordion item</h2>
                         <i class="fa fa-plus-circle"></i>
                     </div>
                     <p>Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor.Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
                 </div>
                 <div class="acc-item">
                     <div class="title">
-                        <h3>accordion item</h3>
+                        <h2>accordion item</h2>
                         <i class="fa fa-plus-circle"></i>
                     </div>
                     <p>Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor.Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
                 </div>
                 <div class="acc-item">
                     <div class="title">
-                        <h3>accordion item</h3>
-                        <i class="fa fa-plus-circle"></i>
-                    </div>
-                    <p>Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor.Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
-                </div>
-            </div>
-
-            <div class="acc-list right">
-                <div class="acc-item">
-                    <div class="title">
-                        <h3>accordion item</h3>
-                        <i class="fa fa-plus-circle"></i>
-                    </div>
-                    <p>Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor.Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
-                </div>
-                <div class="acc-item">
-                    <div class="title">
-                        <h3>accordion item</h3>
-                        <i class="fa fa-plus-circle"></i>
-                    </div>
-                    <p>Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor.Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
-                </div>
-                <div class="acc-item">
-                    <div class="title">
-                        <h3>accordion item</h3>
+                        <h2>accordion item</h2>
                         <i class="fa fa-plus-circle"></i>
                     </div>
                     <p>Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor.Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
                 </div>
             </div>
-        </div>
+            <div class="acc-list left grid-3">
+                <div class="acc-item ">
+                    <div class="title">
+                        <h2>accordion item</h2>
+                        <i class="fa fa-plus-circle"></i>
+                    </div>
+                    <p>Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor.Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
+                </div>
+                <div class="acc-item">
+                    <div class="title">
+                        <h2>accordion item</h2>
+                        <i class="fa fa-plus-circle"></i>
+                    </div>
+                    <p>Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor.Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
+                </div>
+                <div class="acc-item">
+                    <div class="title">
+                        <h2>accordion item</h2>
+                        <i class="fa fa-plus-circle"></i>
+                    </div>
+                    <p>Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor.Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
+                </div>
+            </div>
+        </div>  
         <div class="tap-container"></div>
         <div class="portfolio-container"></div>
-        <div class="grid-container"></div>
+        <div class="hr wrapper"></div>
+        <div class="grid-container wrapper flexbox-grid">
+        <div class="grid-12">
+            <h3>Headline</h3>
+            <p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </div>
+        <div class="grid-6">
+            <h3>Headline</h3>
+            <p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </div>
+        <div class="grid-6">
+            <h3>Headline</h3>
+            <p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </div>
+        <div class="grid-9">
+            <h3>Headline</h3>
+            <p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+            </p>
+        </div>
+        <div class="grid-3">
+            <h3>Headline</h3>
+            <p>Duis dapibus aliquam mi, eget 
+euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis.Curabitur vitae velit in. </p>
+        </div>
+        <div class="grid-3">
+            <h3>Headline</h3>
+            <p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </div>
+        <div class="grid-3">
+            <h3>Headline</h3>
+            <p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </div>
+        <div class="grid-3">
+            <h3>Headline</h3>
+            <p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </div>
+        <div class="grid-3">
+            <h3>Headline</h3>
+            <p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </div>
+        </div>
+        <div class="hr wrapper"></div>
+        <div class="list-container wrapper flexbox-grid">
+            <div class="-list grid-3">
+                <h3>arrow list font size 13px</h3>
+                <ul>
+                    <li>Quisque at massa ipsum</li>
+                    <li>Maecenas a lorem augue, egestas</li>
+                    <li>Cras vitae felis at lacus eleifend</li>
+                    <li>Etiam auctor diam pellentesque</li>
+                    <li>Nulla ac massa at dolor</li>
+                    <li>Condimentum eleifend vitae vitae </li>
+                </ul>
+            </div>
+            <div class="-list grid-3">
+                <h3>list font size 14px</h3>
+                <ul>
+                    <li>Quisque at massa ipsum</li>
+                    <li>Maecenas a lorem augue, egestas</li>
+                    <li>Cras vitae felis at lacus eleifend</li>
+                    <li>Etiam auctor diam pellentesque</li>
+                    <li>Nulla ac massa at dolor</li>
+                    <li>Condimentum eleifend vitae vitae </li>
+                </ul>
+            </div>
+            <div class="-list grid-3">
+                <h3>list font size 14px</h3>
+                <ul>
+                    <li>Quisque at massa ipsum</li>
+                    <li>Maecenas a lorem augue, egestas</li>
+                    <li>Cras vitae felis at lacus eleifend</li>
+                    <li>Etiam auctor diam pellentesque</li>
+                    <li>Nulla ac massa at dolor</li>
+                    <li>Condimentum eleifend vitae vitae </li>
+                </ul>
+            </div>
+            <div class="-list grid-3">
+                <h3>list font size 14px</h3>
+                <ul>
+                    <li>Quisque at massa ipsum</li>
+                    <li>Maecenas a lorem augue, egestas</li>
+                    <li>Cras vitae felis at lacus eleifend</li>
+                    <li>Etiam auctor diam pellentesque</li>
+                    <li>Nulla ac massa at dolor</li>
+                    <li>Condimentum eleifend vitae vitae </li>
+                </ul>
+            </div>
+        </div>
+        <div class="hr wrapper"></div>
         <div class="infobox-single"></div>
         <div class="table-container"></div>
     </main>

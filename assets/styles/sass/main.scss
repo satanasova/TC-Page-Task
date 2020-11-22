@@ -1,3 +1,5 @@
+@import 'flexbox-grid';
+
 * {
     margin: 0;
     padding: 0;
@@ -23,14 +25,21 @@ body {
         text-decoration: none;
         color:white;
     } 
+    ul {
+        list-style: none;
+    }
     button {
         border: none;
         outline: none;
     }
-    h3 {
+    h2 {
         text-transform: uppercase;
         font-size: 16px;
         font-weight: 800;
+    }
+    h3 {
+        text-transform: capitalize;
+        font-size: 16px;
     }
     .hidden {
         display: none;
@@ -153,6 +162,31 @@ body {
         @import 'slidebar.scss';
         @import 'infobox.scss';
         @import 'accordion.scss';
+        .hr {
+            height: 3px;
+            background-color: $gray-darker;
+            margin-top: 40px;
+        }
+
+        .grid-container {
+            margin-top: 50px;
+            >div {
+                &:not(:nth-of-type(4)), &:not(:nth-of-type(5)) {
+                    margin-bottom: 80px;      
+                }
+                &:nth-of-type(4), &:nth-of-type(5) {
+                    margin-bottom: 60px;
+                }
+                p {
+                    font-size: 14px;
+                    text-align: left;
+                    padding-right: 19px;
+                    margin-top: 20px;
+
+                }
+            }
+        }
+
     }
 }
 

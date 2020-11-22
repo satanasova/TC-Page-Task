@@ -1,0 +1,21 @@
+.flexbox-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .grid-1 {
+        width: 70px;
+    }
+    .grid-3 {
+        width: 270px;
+    }
+    .grid-6 {
+        width: 570px;
+    }
+    .grid-9 {
+        width: 870px;
+    }
+    .grid-12 {
+        width: 100%;
+    }
+}
+

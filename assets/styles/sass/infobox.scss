@@ -1,9 +1,6 @@
 .infobox-container {
     margin-top: 55px;
-    display: flex;
-    justify-content: space-between;
     .infobox-card {
-        width: 270px;
         height: 310px;
         text-align: center;
         background-color: $gray-primary;
@@ -27,7 +24,7 @@
             font-size: 60px;
             transition: color 0.4s ease;
         }
-        h3 {
+        h2 {
             margin-top: 17px;
             margin-bottom: 34px;
         }
