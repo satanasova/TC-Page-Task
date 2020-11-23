@@ -1,17 +1,32 @@
-// function tab(elementId, contentSelector) {
-//     let tabElement = document.querySelector(`#${elementId}`);
-//     let tabList = Array.from(tabElement.parentElement.querySelectorAll('li'));
-    
+function tab(elementId) {
+    const tabWrapper = document.querySelector(elementId);
+    if (!tabWrapper) {
+        return;
+    }
 
-//     tabList.forEach(tab => tab.classList.remove('active'));
-//     tabElement.classList.add('active');
+    const tabTitles = tabWrapper.querySelector('.tab-titles');
+    const tabContents = tabWrapper.querySelector('.tab-contents');
 
-//     if (contentSelector) {
-//         let tabContent = document.querySelector(contentSelector)
-//         tabContent.classList.remove('hidden');
-//     }
+    const tabs = Array.from(tabTitles.children);
+    const contents = Array.from(tabContents.children);
+ 
+    tabs[0].classList.add('active');
+    contents[0].classList.add('active');
 
-//     slideShow('#project-slideshow-wrapper');
-//     slideShow('#page-slideshow-wrapper');
-//     slideShow('#sidebar-slideshow-wrapper');
-// }
+    tabTitles.addEventListener('click', event => {
+        const clickedTab = event.target;
+
+        if(!tabs.includes(clickedTab)){
+            return;
+        } 
+        
+        const tabIndex = tabs.indexOf(clickedTab);
+
+        tabs.forEach(tab => tab.classList.remove('active'));
+        contents.forEach(content => content.classList.remove('active'));
+
+        tabs[tabIndex].classList.add('active');
+        contents[tabIndex].classList.add('active');
+
+    })       
+}

@@ -1,4 +1,5 @@
 @import 'flexbox-grid';
+@import 'variables';
 
 * {
     margin: 0;
@@ -7,14 +8,6 @@
     font-family: 'Open Sans', sans-serif;
     line-height: 1.2;
 }
-
-$green-primary: #76c7c0;
-$green-darker: #62b9b0;
-$red-primary: #e8645a;
-$red-darker: #e2534b;
-$gray-primary: #f8f8f8;
-$gray-darker: #e5e6e6;
-$gray-shadow: 0 4px $gray-darker;
 
 body {
     height: 5510px;
@@ -194,11 +187,13 @@ body {
         }
     }
         
+
     
     main {
         @import 'slidebar.scss';
         @import 'infobox.scss';
         @import 'accordion.scss';
+        @import 'tabs.scss';
         .hr {
             height: 3px;
             background-color: $gray-darker;

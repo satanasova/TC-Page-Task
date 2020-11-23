@@ -289,7 +289,7 @@ body {
           cursor: pointer; }
   body main .accordion-container {
     margin-top: 110px; }
-    body main .accordion-container .acc-list .acc-item {
+    body main .accordion-container .acc-wrapper .acc-item {
       background-color: #f8f8f8;
       height: 50px;
       overflow: hidden;
@@ -298,16 +298,63 @@ body {
       border-radius: 4px;
       box-shadow: 0 4px #e5e6e6;
       margin-bottom: 10px;
-      transition: all 0.4s ease; }
-      body main .accordion-container .acc-list .acc-item.active {
+      transition: all 0.4s ease;
+      cursor: pointer; }
+      body main .accordion-container .acc-wrapper .acc-item .fa-minus-circle {
+        display: none; }
+      body main .accordion-container .acc-wrapper .acc-item.active {
         background-color: white;
         height: 120px; }
-      body main .accordion-container .acc-list .acc-item .title {
+        body main .accordion-container .acc-wrapper .acc-item.active .fa-minus-circle {
+          display: block; }
+        body main .accordion-container .acc-wrapper .acc-item.active .fa-plus-circle {
+          display: none; }
+      body main .accordion-container .acc-wrapper .acc-item .title {
         display: flex;
         justify-content: space-between;
         margin-bottom: 22px; }
-        body main .accordion-container .acc-list .acc-item .title i {
+        body main .accordion-container .acc-wrapper .acc-item .title i {
           font-size: 20px; }
+  body main .tab-container {
+    margin-top: 40px; }
+    body main .tab-container .tab-wrapper .tab-titles {
+      display: flex; }
+      body main .tab-container .tab-wrapper .tab-titles .tab-title {
+        width: 130px;
+        height: 55px;
+        color: white;
+        background-color: #76c7c0;
+        text-align: center;
+        border-radius: 5px 5px 0 0;
+        padding-top: 18px;
+        transition: all 0.4s ease;
+        cursor: pointer; }
+        body main .tab-container .tab-wrapper .tab-titles .tab-title:not(:last-child) {
+          margin-right: 10px; }
+        body main .tab-container .tab-wrapper .tab-titles .tab-title:hover {
+          background-color: #e8645a; }
+        body main .tab-container .tab-wrapper .tab-titles .tab-title.active {
+          color: inherit;
+          background-color: #f8f8f8; }
+    body main .tab-container .tab-wrapper .tab-contents {
+      z-index: 1;
+      position: relative;
+      top: -5px; }
+      body main .tab-container .tab-wrapper .tab-contents .tab-content {
+        display: none; }
+        body main .tab-container .tab-wrapper .tab-contents .tab-content.active {
+          display: flex;
+          overflow: hidden;
+          height: 170px;
+          padding: 33px 25px 28px 20px;
+          background-color: #f8f8f8;
+          border-radius: 5px;
+          box-shadow: 0 4px #e5e6e6; }
+        body main .tab-container .tab-wrapper .tab-contents .tab-content p {
+          line-height: 1.6;
+          font-size: 13px;
+          min-width: 230px;
+          margin-right: 60px; }
   body main .hr {
     height: 3px;
     background-color: #e5e6e6;
