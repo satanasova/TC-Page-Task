@@ -14,7 +14,6 @@ $red-primary: #e8645a;
 $red-darker: #e2534b;
 $gray-primary: #f8f8f8;
 $gray-darker: #e5e6e6;
-
 $gray-shadow: 0 4px $gray-darker;
 
 body {
@@ -94,7 +93,6 @@ body {
                 font-size: 14px;
                 font-weight: 400;
                 text-transform: uppercase;
-
                 li {
                     border-radius: 5px;
                     &:not(:last-child) {
@@ -109,14 +107,13 @@ body {
                             cursor: pointer;
                         }
                     }
-                    &#search {
+                    &#search-button {
                         text-align: center;
                         width: 33px;
                         height: 30px;
-                        background-color: #e8645a;
-                        box-shadow: 0px 2px #e2534b;
+                        background-color: $red-primary;
+                        box-shadow: 0px 2px $red-darker;
                         position: relative;
-                        top: 2px;
                         left: -3px;
                         &:hover, &.active {
                             cursor: pointer;
@@ -126,30 +123,33 @@ body {
                             margin-top: 8px;
                         }
                         #search-box {
-                            font-size: 14px;
-                            text-align: left;
-                            font-family: Myriad Pro, sans-serif;
-                            padding: 5px 0 0 8px;
-                            text-transform: none;
-                            width: 200px;
-                            height: 40px;
-                            background-color: white;
-                            border: 5px solid #e2534b;
-                            border-radius: 4px;
-                            position: absolute;
-                            left: -166px;
-                            bottom: -54px;
-                            z-index: 1;
+                            &.active {
+                                display: block;
+                            }
+                            display: none;
                             &:before {
                                 content: "";
-                                position: absolute;
-                                top: -10px;
-                                right: 5px;
+                                position: relative;
+                                top: -8px;
+                                right: -5px;
                                 border-bottom: 7px solid $red-darker;
                                 border-left: 7px solid transparent;
                                 border-right: 7px solid transparent;
                             }
-
+                            #search-box-input {
+                                font-size: 14px;
+                                font-family: Myriad Pro, sans-serif;
+                                padding-left: 5px;
+                                width: 200px;
+                                height: 40px;
+                                border: 5px solid $red-darker;
+                                border-radius: 4px;
+                                position: relative;
+                                left: -180px;
+                                bottom: -20px;
+                                z-index: 1;
+                                outline: none;
+                            }
                         }
                     }
                     &#portfolio {
@@ -203,7 +203,6 @@ body {
             background-color: $gray-darker;
             margin-top: 40px;
         }
-
         .grid-container {
             margin-top: 50px;
             >div {
@@ -222,7 +221,6 @@ body {
                 }
             }
         }
-
     }
 
 

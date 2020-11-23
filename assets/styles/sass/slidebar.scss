@@ -4,22 +4,14 @@
     flex-wrap: wrap;
     justify-content: space-between; 
     #project-slideshow-wrapper, #page-slideshow-wrapper {
+        position: relative;
         button{
             width: 50px;
             height: 57px;
+            top: calc(50% - 61px);
             i {
                 font-size: 40px;
             }
-        }
-    }
-    #project-slideshow-wrapper {
-        button{
-            top: calc(50% - 69px);
-        }
-    }
-    #page-slideshow-wrapper {
-        button{
-            top: calc(50% - 52px);;
         }
     }
     .slidebar {
@@ -64,6 +56,8 @@
         } 
     }
     .small-sliders {
+        width: 100%;
+        margin-top: 35px;
         display: flex;
         justify-content: space-between;  
         .slider.page-slideshow {
