@@ -162,7 +162,6 @@ body {
                 }
             }
         }
-    }
         .page-headline {
             height: 80px;
             justify-content: space-between;
@@ -194,6 +193,8 @@ body {
 
         }
     }
+        
+    
     main {
         @import 'slidebar.scss';
         @import 'infobox.scss';
@@ -222,6 +223,7 @@ body {
             }
         }
     }
+}
 
 
 

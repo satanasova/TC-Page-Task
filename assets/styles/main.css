@@ -137,178 +137,189 @@ body {
             color: white;
             position: relative;
             left: -2px; }
-  body .page-headline {
-    height: 80px;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    padding: 7px 6px 0 9px;
-    position: relative; }
-    body .page-headline:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 100%;
-      border-top: 12px solid #ececec;
-      border-left: 12px solid transparent;
-      border-right: 12px solid transparent; }
-    body .page-headline h1 {
-      font-size: 20px;
-      font-weight: 600;
-      text-transform: uppercase; }
-    body .page-headline p {
-      font-size: 12px;
-      text-transform: capitalize; }
-      body .page-headline p span:nth-child(2) {
-        margin: 0 5px; }
-
-main .slidebar-container {
-  height: 1430px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-  main .slidebar-container #project-slideshow-wrapper, main .slidebar-container #page-slideshow-wrapper {
-    position: relative; }
-    main .slidebar-container #project-slideshow-wrapper button, main .slidebar-container #page-slideshow-wrapper button {
-      width: 50px;
-      height: 57px;
-      top: calc(50% - 61px); }
-      main .slidebar-container #project-slideshow-wrapper button i, main .slidebar-container #page-slideshow-wrapper button i {
-        font-size: 40px; }
-  main .slidebar-container .slidebar {
-    text-align: center;
-    position: relative;
-    overflow: hidden; }
-    main .slidebar-container .slidebar .slider {
+    body header .page-headline {
+      height: 80px;
+      justify-content: space-between;
       display: flex;
-      overflow: hidden;
-      margin-bottom: 25px;
-      border-radius: 4px;
-      box-shadow: 0 4px #e5e6e6; }
-    main .slidebar-container .slidebar button {
-      cursor: pointer;
-      color: white;
-      box-shadow: 0px 3px 1px 0px #e2534b;
-      position: absolute; }
-      main .slidebar-container .slidebar button.prev {
-        background-color: #e8645a;
-        border-radius: 0 4px 4px 0;
-        box-shadow: 0px 3px #e2534b; }
-      main .slidebar-container .slidebar button.next {
-        background-color: #e8645a;
-        right: 0;
-        border-radius: 4px 0px 0 4px;
-        box-shadow: 0 3px #e2534b; }
-    main .slidebar-container .slidebar .slidebar-nav-item {
-      cursor: pointer;
-      height: 5px;
-      width: 60px;
-      display: inline-block;
-      margin: 0 5px;
-      background-color: #b0b8b9;
-      transition: background-color 0.4s ease; }
-      main .slidebar-container .slidebar .slidebar-nav-item:hover, main .slidebar-container .slidebar .slidebar-nav-item.active {
-        background-color: #e2534b; }
-  main .slidebar-container .small-sliders {
-    width: 100%;
-    margin-top: 35px;
+      align-items: center;
+      padding: 7px 6px 0 9px;
+      position: relative; }
+      body header .page-headline:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 100%;
+        border-top: 12px solid #ececec;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent; }
+      body header .page-headline h1 {
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase; }
+      body header .page-headline p {
+        font-size: 12px;
+        text-transform: capitalize; }
+        body header .page-headline p span:nth-child(2) {
+          margin: 0 5px; }
+  body main .slidebar-container {
+    height: 1430px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between; }
-    main .slidebar-container .small-sliders .slider.page-slideshow {
-      width: 870px;
-      height: 565px; }
-    main .slidebar-container .small-sliders .aside-container {
-      width: 270px; }
-      main .slidebar-container .small-sliders .aside-container .slidebar .sidebar-slideshow {
-        height: 200px;
-        margin-bottom: 17px; }
-        main .slidebar-container .small-sliders .aside-container .slidebar .sidebar-slideshow button {
-          width: 40px;
-          height: 38px;
-          top: calc(50% - 38px); }
-          main .slidebar-container .small-sliders .aside-container .slidebar .sidebar-slideshow button.prev {
-            background-color: #e8645a; }
-          main .slidebar-container .small-sliders .aside-container .slidebar .sidebar-slideshow button.next {
-            background-color: #e8645a;
-            right: 0; }
-          main .slidebar-container .small-sliders .aside-container .slidebar .sidebar-slideshow button i {
-            font-size: 30px;
-            font-weight: bold; }
-      main .slidebar-container .small-sliders .aside-container .slidebar .slider-nav .slidebar-nav-item {
-        width: 30px; }
-      main .slidebar-container .small-sliders .aside-container .sidebar-gallery h2 {
-        margin-bottom: 20px;
-        margin-top: 40px; }
-      main .slidebar-container .small-sliders .aside-container .sidebar-gallery .gallery {
-        padding-top: 7px; }
-        main .slidebar-container .small-sliders .aside-container .sidebar-gallery .gallery img {
-          width: 26%;
-          margin-bottom: 25px;
-          border-radius: 4px;
-          box-shadow: 0 4px #e5e6e6; }
-
-main .infobox-container {
-  margin-top: 30px; }
-  main .infobox-container .infobox-card {
-    height: 310px;
-    text-align: center;
-    background-color: #f8f8f8;
-    position: relative;
-    padding: 50px 20px;
-    border-radius: 4px;
-    box-shadow: 0 4px #e5e6e6;
-    transition: background-color 0.4s ease; }
-    main .infobox-container .infobox-card:hover {
-      background-color: white; }
-      main .infobox-container .infobox-card:hover i {
-        color: #e8645a; }
-      main .infobox-container .infobox-card:hover button {
-        background-color: #e8645a;
-        box-shadow: 0 4px #e2534b; }
-    main .infobox-container .infobox-card i {
-      color: #76c7c0;
-      font-size: 60px;
-      transition: color 0.4s ease; }
-    main .infobox-container .infobox-card h2 {
-      margin-top: 12px;
-      margin-bottom: 27px; }
-    main .infobox-container .infobox-card p {
-      font-size: 12px;
-      line-height: 1.6; }
-    main .infobox-container .infobox-card button {
-      font-size: 14px;
-      position: absolute;
-      bottom: -25px;
-      left: calc(50% - 100px);
-      width: 200px;
-      color: white;
-      height: 50px;
+    body main .slidebar-container #project-slideshow-wrapper, body main .slidebar-container #page-slideshow-wrapper {
+      position: relative; }
+      body main .slidebar-container #project-slideshow-wrapper button, body main .slidebar-container #page-slideshow-wrapper button {
+        width: 50px;
+        height: 57px;
+        top: calc(50% - 61px); }
+        body main .slidebar-container #project-slideshow-wrapper button i, body main .slidebar-container #page-slideshow-wrapper button i {
+          font-size: 40px; }
+    body main .slidebar-container .slidebar {
+      text-align: center;
+      position: relative;
+      overflow: hidden; }
+      body main .slidebar-container .slidebar .slider {
+        display: flex;
+        overflow: hidden;
+        margin-bottom: 25px;
+        border-radius: 4px;
+        box-shadow: 0 4px #e5e6e6; }
+      body main .slidebar-container .slidebar button {
+        cursor: pointer;
+        color: white;
+        box-shadow: 0px 3px 1px 0px #e2534b;
+        position: absolute; }
+        body main .slidebar-container .slidebar button.prev {
+          background-color: #e8645a;
+          border-radius: 0 4px 4px 0;
+          box-shadow: 0px 3px #e2534b; }
+        body main .slidebar-container .slidebar button.next {
+          background-color: #e8645a;
+          right: 0;
+          border-radius: 4px 0px 0 4px;
+          box-shadow: 0 3px #e2534b; }
+      body main .slidebar-container .slidebar .slidebar-nav-item {
+        cursor: pointer;
+        height: 5px;
+        width: 60px;
+        display: inline-block;
+        margin: 0 5px;
+        background-color: #b0b8b9;
+        transition: background-color 0.4s ease; }
+        body main .slidebar-container .slidebar .slidebar-nav-item:hover, body main .slidebar-container .slidebar .slidebar-nav-item.active {
+          background-color: #e2534b; }
+    body main .slidebar-container .small-sliders {
+      width: 100%;
+      margin-top: 35px;
+      display: flex;
+      justify-content: space-between; }
+      body main .slidebar-container .small-sliders .slider.page-slideshow {
+        width: 870px;
+        height: 565px; }
+      body main .slidebar-container .small-sliders .aside-container {
+        width: 270px; }
+        body main .slidebar-container .small-sliders .aside-container .slidebar .sidebar-slideshow {
+          height: 200px;
+          margin-bottom: 17px; }
+          body main .slidebar-container .small-sliders .aside-container .slidebar .sidebar-slideshow button {
+            width: 40px;
+            height: 38px;
+            top: calc(50% - 38px); }
+            body main .slidebar-container .small-sliders .aside-container .slidebar .sidebar-slideshow button.prev {
+              background-color: #e8645a; }
+            body main .slidebar-container .small-sliders .aside-container .slidebar .sidebar-slideshow button.next {
+              background-color: #e8645a;
+              right: 0; }
+            body main .slidebar-container .small-sliders .aside-container .slidebar .sidebar-slideshow button i {
+              font-size: 30px;
+              font-weight: bold; }
+        body main .slidebar-container .small-sliders .aside-container .slidebar .slider-nav .slidebar-nav-item {
+          width: 30px; }
+        body main .slidebar-container .small-sliders .aside-container .sidebar-gallery h2 {
+          margin-bottom: 20px;
+          margin-top: 40px; }
+        body main .slidebar-container .small-sliders .aside-container .sidebar-gallery .gallery {
+          padding-top: 7px; }
+          body main .slidebar-container .small-sliders .aside-container .sidebar-gallery .gallery img {
+            width: 26%;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            box-shadow: 0 4px #e5e6e6; }
+  body main .infobox-container {
+    margin-top: 30px; }
+    body main .infobox-container .infobox-card {
+      height: 310px;
+      text-align: center;
+      background-color: #f8f8f8;
+      position: relative;
+      padding: 50px 20px;
       border-radius: 4px;
-      background-color: #76c7c0;
-      box-shadow: 0 4px #62b9b0;
+      box-shadow: 0 4px #e5e6e6;
+      transition: background-color 0.4s ease; }
+      body main .infobox-container .infobox-card:hover {
+        background-color: white; }
+        body main .infobox-container .infobox-card:hover i {
+          color: #e8645a; }
+        body main .infobox-container .infobox-card:hover button {
+          background-color: #e8645a;
+          box-shadow: 0 4px #e2534b; }
+      body main .infobox-container .infobox-card i {
+        color: #76c7c0;
+        font-size: 60px;
+        transition: color 0.4s ease; }
+      body main .infobox-container .infobox-card h2 {
+        margin-top: 12px;
+        margin-bottom: 27px; }
+      body main .infobox-container .infobox-card p {
+        font-size: 12px;
+        line-height: 1.6; }
+      body main .infobox-container .infobox-card button {
+        font-size: 14px;
+        position: absolute;
+        bottom: -25px;
+        left: calc(50% - 100px);
+        width: 200px;
+        color: white;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #76c7c0;
+        box-shadow: 0 4px #62b9b0;
+        transition: all 0.4s ease; }
+        body main .infobox-container .infobox-card button:hover {
+          cursor: pointer; }
+  body main .accordion-container {
+    margin-top: 110px; }
+    body main .accordion-container .acc-list .acc-item {
+      background-color: #f8f8f8;
+      height: 50px;
+      overflow: hidden;
+      font-size: 13px;
+      padding: 16px 19px 30px 20px;
+      border-radius: 4px;
+      box-shadow: 0 4px #e5e6e6;
+      margin-bottom: 10px;
       transition: all 0.4s ease; }
-      main .infobox-container .infobox-card button:hover {
-        cursor: pointer; }
-
-main .accordion-container {
-  margin-top: 110px; }
-  main .accordion-container .acc-list .acc-item {
-    height: 50px;
-    overflow: hidden; }
-
-main .hr {
-  height: 3px;
-  background-color: #e5e6e6;
-  margin-top: 40px; }
-
-main .grid-container {
-  margin-top: 50px; }
-  main .grid-container > div:not(:nth-of-type(4)), main .grid-container > div:not(:nth-of-type(5)) {
-    margin-bottom: 80px; }
-  main .grid-container > div:nth-of-type(4), main .grid-container > div:nth-of-type(5) {
-    margin-bottom: 60px; }
-  main .grid-container > div p {
-    font-size: 14px;
-    text-align: left;
-    padding-right: 19px;
-    margin-top: 20px; }
+      body main .accordion-container .acc-list .acc-item.active {
+        background-color: white;
+        height: 120px; }
+      body main .accordion-container .acc-list .acc-item .title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 22px; }
+        body main .accordion-container .acc-list .acc-item .title i {
+          font-size: 20px; }
+  body main .hr {
+    height: 3px;
+    background-color: #e5e6e6;
+    margin-top: 40px; }
+  body main .grid-container {
+    margin-top: 50px; }
+    body main .grid-container > div:not(:nth-of-type(4)), body main .grid-container > div:not(:nth-of-type(5)) {
+      margin-bottom: 80px; }
+    body main .grid-container > div:nth-of-type(4), body main .grid-container > div:nth-of-type(5) {
+      margin-bottom: 60px; }
+    body main .grid-container > div p {
+      font-size: 14px;
+      text-align: left;
+      padding-right: 19px;
+      margin-top: 20px; }
