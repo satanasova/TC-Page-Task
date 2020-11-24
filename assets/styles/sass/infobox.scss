@@ -18,7 +18,7 @@
             }
             & button{
                 background-color: $red-primary;
-                box-shadow: 0 4px $red-darker;
+                box-shadow: $red-shadow;
             }
         }
         i {
@@ -44,11 +44,9 @@
             height: 50px;
             border-radius: 4px;
             background-color: $green-primary;
-            box-shadow: 0 4px $green-darker;
+            box-shadow: $green-shadow;
             transition: all 0.4s ease;
-            &:hover {
-                cursor: pointer;
-            }
+
             
         }
     }

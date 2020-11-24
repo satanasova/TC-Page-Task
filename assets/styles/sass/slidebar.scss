@@ -1,5 +1,4 @@
 @import 'variables';
-
 .slidebar-container {
     height: 1430px;
     display: flex;
@@ -28,20 +27,19 @@
             box-shadow: $gray-shadow;
         }
         button {
-            cursor: pointer;
             color: white;
-            box-shadow: 0px 3px 1px 0px $red-darker;
+            box-shadow: $red-shadow;
             position: absolute;
             &.prev {
                 background-color: $red-primary;
                 border-radius: 0 4px 4px 0;
-                box-shadow: 0px 3px $red-darker;               
+                box-shadow: $red-shadow;              
             }
             &.next {
                 background-color: $red-primary;
                 right: 0;
                 border-radius: 4px 0px 0 4px;
-                box-shadow: 0 3px $red-darker;               
+                box-shadow: $red-shadow;              
             }
         }
         .slidebar-nav-item {
