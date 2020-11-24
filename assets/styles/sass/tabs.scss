@@ -3,6 +3,11 @@
 .tab-container {
     margin-top: 40px;
     .tab-wrapper {
+        &:first-child {
+            p{
+                margin-right: 60px;
+            }
+        }
         .tab-titles {
             display: flex;
             .tab-title{
@@ -42,11 +47,12 @@
                     border-radius: 5px;
                     box-shadow: $gray-shadow;
                 }
+
                 p {
                     line-height: 1.6;
                     font-size: 13px;
-                    min-width: 230px;
-                    margin-right: 60px;
+                    // min-width: 230px;
+                    
                 }
             }
         }

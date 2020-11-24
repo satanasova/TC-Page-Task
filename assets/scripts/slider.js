@@ -16,7 +16,7 @@ const slideShow = function(sliderSelector){
     navBtns[0].classList.add('active');
 
     prev.addEventListener('click', () => {
-        slider.scrollBy({ top: 0, left: -sliderWidth, behavior: 'smooth' });
+        slider.scrollBy({ top: 0, left: -slider.offsetWidth, behavior: 'smooth' });
 
         if (slideIndex > 0) {
             slideIndex -= 1;
@@ -26,7 +26,7 @@ const slideShow = function(sliderSelector){
     });
 
     next.addEventListener('click', () => {
-        slider.scrollBy({ top: 0, left: sliderWidth, behavior: 'smooth' });
+        slider.scrollBy({ top: 0, left: slider.offsetWidth, behavior: 'smooth' });
 
         if (slideIndex < sliderImagesCount - 1) {
             slideIndex += 1;
@@ -41,7 +41,7 @@ const slideShow = function(sliderSelector){
             return;
         }
 
-        const scrollToValue = sliderWidth*(navBtns.indexOf(clickedBtn));
+        const scrollToValue = slider.offsetWidth*(navBtns.indexOf(clickedBtn));
         slider.scrollTo({ top: 0, left: scrollToValue, behavior: 'smooth' });
         slideIndex = navBtns.indexOf(clickedBtn);
         sliderWrapper.setAttribute('data-idx', slideIndex);

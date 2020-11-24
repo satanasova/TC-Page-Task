@@ -10,7 +10,7 @@
 }
 
 body {
-    height: 5510px;
+    // height: 5510px;
     background-color: #f3f3f3;
     color: #7f8c8c;
     a {
@@ -40,13 +40,12 @@ body {
     .wrapper {
         width: 1170px;
         margin: auto;
+        max-width: 100%;
     }    
     .logo {
-        display: flex;
         text-decoration: none;
-        align-items: flex-end;
         color: white;
-        // padding-left: 6px;
+        padding-left: 6px;
         span:first-child {
             font-size: 30px;
             text-transform: uppercase;
@@ -54,10 +53,7 @@ body {
         }
         span:nth-child(2) {
             font-size: 25px;
-            align-self: flex-end;
-            margin-left: 5px;
             font-weight: 300;
-            padding-bottom: 2px;
         }
     }
 
@@ -172,10 +168,13 @@ body {
                             tr {
                                 th {
                                     &:nth-child(3) {
-                                        padding-right: 38%;
+                                        padding-right: 40%;
                                     }
                                     &:not(:first-child) {
                                         border-left: 1px solid $gray-darker;
+                                    }
+                                    &:last-child {
+                                        width: 270px;
                                     }
                                 }                            }
                         }
@@ -190,6 +189,9 @@ body {
                                 th {
                                     &:not(:first-child) {
                                         border-left: 1px solid $green-darker;
+                                    }
+                                    &:last-child {
+                                        width: 48%;
                                     }
                                 }           
                             }
@@ -206,7 +208,9 @@ body {
                                     &:not(:first-child) {
                                         border-left: 1px solid $red-darker;
                                     }
-
+                                    &:last-child {
+                                        width: 48%;
+                                    }
                                 }
                             }
                         }
@@ -254,9 +258,7 @@ body {
                                 &:not(:first-child) {
                                     border-left: 1px solid $gray-darker;
                                 }
-                                &:last-child {
-                                    width: 270px;
-                                }
+                               
                             }
                         }
                     }
@@ -268,7 +270,20 @@ body {
     @import 'footer.scss';
 }
 
+@media (max-width: 1280px) {
+  body {
+      .wrapper {
+          padding: 0 20px;
+      }
 
+      main {
+          .tablel-container {
+              table{}
+          }
+      }
+  }
+    
+}
 
 
 

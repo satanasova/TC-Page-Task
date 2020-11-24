@@ -4,16 +4,19 @@
     
     .portfolio-item {
         margin-top: 37px;
-        height: 270px;
+        max-height: 270px;
         position: relative;
-        overflow: hidden;
+        // overflow: hidden;
+        border-radius: 5px;
         box-shadow: $gray-shadow;
         &:hover {
             .portfolio-overlay{
                opacity: 1;
-               
-               
             }
+        }
+        img {
+            max-width: 100%;
+            // max-height: 100%;
         }
         .portfolio-overlay {   
             opacity: 0;
@@ -54,3 +57,12 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    body {
+        .wrapper {
+            padding: 0 20px;
+        }
+    }
+      
+  }

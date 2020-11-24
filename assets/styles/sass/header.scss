@@ -2,9 +2,7 @@
 
 header {
     width: 100%;
-    background: linear-gradient(to bottom,$green-primary 50%,#ececec 50%);
-    margin-bottom: 50px;
-    
+    position: relative;
     &:after {
         content: "";
         height: 9px;
@@ -14,118 +12,155 @@ header {
         top: 71px; 
     }
     nav {
-        height: 80px;
-        width: 100%;
+        padding: 22px 0;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        padding-left: 6px;
-        .nav-items {
-            list-style: none;
-            width: 780px;
+        background-color: $green-primary;
+        .wrapper {
             display: flex;
             justify-content: space-between;
-            font-size: 14px;
-            font-weight: 400;
-            text-transform: uppercase;
-            li {
-                border-radius: 5px;
-                &:not(:last-child) {
-                    padding: 9px 20px;
-                    height: 30px;
-                    padding-top: 8px;
-                    
-                    transition: background-color 0.4s ease;
-                    &:hover, &.active {
-                        background-color: #62a29e !important;
-                        box-shadow: 0 4px #528b86;
-                        cursor: pointer;
-                    }
-                }
-                &#search-button {
-                    text-align: center;
-                    width: 33px;
-                    height: 30px;
-                    background-color: $red-primary;
-                    box-shadow: $red-shadow;
-                    position: relative;
-                    left: -3px;
-                    &:hover, &.active {
-                        cursor: pointer;
-                    }
-                    i {
-                        font-size: 16px;
-                        margin-top: 8px;
-                    }
-                    #search-box {
-                        &.active {
-                            display: block;
-                        }
-                        display: none;
-                        &:before {
-                            content: "";
-                            position: relative;
-                            top: -8px;
-                            right: -5px;
-                            border-bottom: 7px solid $red-darker;
-                            border-left: 7px solid transparent;
-                            border-right: 7px solid transparent;
-                        }
-                        #search-box-input {
-                            font-size: 14px;
-                            font-family: Myriad Pro, sans-serif;
-                            padding-left: 5px;
-                            width: 200px;
-                            height: 40px;
-                            border: 5px solid $red-darker;
-                            border-radius: 4px;
-                            position: relative;
-                            left: -180px;
-                            bottom: -20px;
-                            z-index: 1;
-                            outline: none;
+            .nav-items {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 2px 0;
+                font-size: 13px;
+                font-weight: 400;
+                text-transform: uppercase;
+                li {
+                    border-radius: 5px;
+                    &:not(:last-child) {
+                        padding: 10px 22px 0px 22px;
+                        transition: background-color 0.4s ease;
+                        margin-right: 8px;
+                        &:hover, &.active {
+                            background-color: #62a29e;
+                            box-shadow: 0 4px #528b86;
+                            cursor: pointer;
                         }
                     }
-                }
-                &#portfolio {
-                    i {
-                        color: white;
+                    &#search-button {
+                        text-align: center;
+                        background-color: $red-primary;
+                        box-shadow: $red-shadow;
                         position: relative;
-                        left: -2px;
+                        padding: 9px 10px 0px 10px;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                        i {
+                            font-size: 16px;
+                        }
+                        #search-box {
+                            &.active {
+                                display: block;
+                            }
+                            display: none;
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                top: calc(100% + 7px);
+                                right: 12px;
+                                border-bottom: 7px solid $red-darker;
+                                border-left: 7px solid transparent;
+                                border-right: 7px solid transparent;
+                            }
+                            #search-box-input {
+                                font-size: 14px;
+                                font-family: Myriad Pro, sans-serif;
+                                border: 5px solid $red-darker;
+                                border-radius: 5px;
+                                position: absolute;
+                                right: 0;
+                                top: calc(100% + 13px);
+                                z-index: 1;
+                                outline: none;
+                                padding: 8px 11px;
+                            }
+                    
+                        }
+                    }
+                    &#portfolio {
+                        white-space: nowrap;
+                        i {
+                            color: white;
+                            position: relative;
+                            left: -2px;
+                            
+                        }
                     }
                 }
             }
         }
     }
     .page-headline {
-        height: 80px;
-        justify-content: space-between;
-        display: flex;
         align-items: center;
-        padding: 7px 6px 0 9px;
-        position: relative;
-        &:after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 100%;
-            border-top: 12px solid #ececec;
-            border-left: 12px solid transparent;
-            border-right: 12px solid transparent;    
+        padding: 28px 0;
+        background-color: #ececec;
+        .wrapper {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 100%;
+                border-top: 12px solid #ececec;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;    
+            }
+            h1 {
+                font-size: 20px;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding-left: 5px;
+            }
+            p {
+                font-size: 12px;
+                text-transform: capitalize;
+                padding: 5px 5px 5px 0;
+                span:nth-child(2) {
+                    margin: 0 5px;
+                }
+            }
+    
         }
-        h1 {
-            font-size: 20px;
-            font-weight: 600;
-            text-transform: uppercase;
+    }
+}
+
+@media (max-width: 1050px) {
+    header {
+        nav {
+            justify-content: center;
+            padding-bottom: 20px;
         }
-        p {
-            font-size: 12px;
-            text-transform: capitalize;
-            span:nth-child(2) {
-                margin: 0 5px;
+        
+    }
+      
+}
+
+@media (max-width: 790px) {
+    header {
+        nav {
+            padding-bottom: 10px;
+            .logo {
+                span:first-child {
+                    font-size: 25px;
+                }
+                span:nth-child(2) {
+                    font-size: 20px;
+    
+                }
+            }
+            .nav-items {
+                font-size: 12px;
             }
         }
-
+    
+        
     }
+      
 }
