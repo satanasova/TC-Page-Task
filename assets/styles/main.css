@@ -101,7 +101,7 @@ body {
             width: 33px;
             height: 30px;
             background-color: #e8645a;
-            box-shadow: 0 4px #e2534b;
+            box-shadow: 0 3px #e2534b;
             position: relative;
             left: -3px; }
             body header nav .nav-items li#search-button:hover, body header nav .nav-items li#search-button.active {
@@ -184,20 +184,20 @@ body {
         overflow: hidden;
         margin-bottom: 25px;
         border-radius: 4px;
-        box-shadow: 0 4px #e5e6e6; }
+        box-shadow: 0 3px #e5e6e6; }
       body main .slidebar-container .slidebar button {
         color: white;
-        box-shadow: 0 4px #e2534b;
+        box-shadow: 0 3px #e2534b;
         position: absolute; }
         body main .slidebar-container .slidebar button.prev {
           background-color: #e8645a;
           border-radius: 0 4px 4px 0;
-          box-shadow: 0 4px #e2534b; }
+          box-shadow: 0 3px #e2534b; }
         body main .slidebar-container .slidebar button.next {
           background-color: #e8645a;
           right: 0;
           border-radius: 4px 0px 0 4px;
-          box-shadow: 0 4px #e2534b; }
+          box-shadow: 0 3px #e2534b; }
       body main .slidebar-container .slidebar .slidebar-nav-item {
         cursor: pointer;
         height: 5px;
@@ -244,7 +244,7 @@ body {
             width: 26%;
             margin-bottom: 25px;
             border-radius: 4px;
-            box-shadow: 0 4px #e5e6e6; }
+            box-shadow: 0 3px #e5e6e6; }
   body main .infobox-container {
     margin-top: 30px; }
     body main .infobox-container .infobox-card {
@@ -254,7 +254,7 @@ body {
       position: relative;
       padding: 50px 20px;
       border-radius: 4px;
-      box-shadow: 0 4px #e5e6e6;
+      box-shadow: 0 3px #e5e6e6;
       transition: background-color 0.4s ease; }
       body main .infobox-container .infobox-card:hover {
         background-color: white; }
@@ -262,7 +262,7 @@ body {
           color: #e8645a; }
         body main .infobox-container .infobox-card:hover button {
           background-color: #e8645a;
-          box-shadow: 0 4px #e2534b; }
+          box-shadow: 0 3px #e2534b; }
       body main .infobox-container .infobox-card i {
         color: #76c7c0;
         font-size: 60px;
@@ -283,7 +283,7 @@ body {
         height: 50px;
         border-radius: 4px;
         background-color: #76c7c0;
-        box-shadow: 0 4px #62b9b0;
+        box-shadow: 0 3px #62b9b0;
         transition: all 0.4s ease; }
   body main .accordion-container {
     margin-top: 110px; }
@@ -294,7 +294,7 @@ body {
       font-size: 13px;
       padding: 16px 19px 30px 20px;
       border-radius: 4px;
-      box-shadow: 0 4px #e5e6e6;
+      box-shadow: 0 3px #e5e6e6;
       margin-bottom: 10px;
       transition: all 0.4s ease;
       cursor: pointer; }
@@ -347,7 +347,7 @@ body {
           padding: 33px 25px 28px 20px;
           background-color: #f8f8f8;
           border-radius: 5px;
-          box-shadow: 0 4px #e5e6e6; }
+          box-shadow: 0 3px #e5e6e6; }
         body main .tab-container .tab-wrapper .tab-contents .tab-content p {
           line-height: 1.6;
           font-size: 13px;
@@ -358,7 +358,7 @@ body {
     height: 270px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px #e5e6e6; }
+    box-shadow: 0 3px #e5e6e6; }
     body main .portfolio-container .portfolio-item:hover .portfolio-overlay {
       opacity: 1; }
     body main .portfolio-container .portfolio-item .portfolio-overlay {
@@ -438,7 +438,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 37px 0 25px;
-    margin-top: 40px;
+    margin-top: 42px;
     border-radius: 5px; }
     body main .infobox-single .content h2 {
       text-transform: capitalize;
@@ -454,11 +454,60 @@ body {
       font-size: 20px;
       color: white;
       border-radius: 5px;
-      box-shadow: 0 4px #e2534b; }
+      box-shadow: 0 3px #e2534b; }
+  body main .table-container {
+    height: 520px;
+    margin-top: 55px; }
+    body main .table-container .table-wrapper:first-child table thead {
+      background-color: #ececec; }
+      body main .table-container .table-wrapper:first-child table thead tr th:nth-child(3) {
+        padding-right: 38%; }
+      body main .table-container .table-wrapper:first-child table thead tr th:not(:first-child) {
+        border-left: 1px solid #e5e6e6; }
+    body main .table-container .table-wrapper:nth-child(2) table thead {
+      background-color: #76c7c0;
+      color: white; }
+      body main .table-container .table-wrapper:nth-child(2) table thead tr th:not(:first-child) {
+        border-left: 1px solid #62b9b0; }
+    body main .table-container .table-wrapper:last-child table thead {
+      background-color: #e8645a;
+      color: white; }
+      body main .table-container .table-wrapper:last-child table thead tr th:not(:first-child) {
+        border-left: 1px solid #e2534b; }
+    body main .table-container .table-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 3px #e5e6e6;
+      border-radius: 5px; }
+      body main .table-container .table-wrapper table thead tr th {
+        height: 50px;
+        padding-left: 10px;
+        text-align: left; }
+        body main .table-container .table-wrapper table thead tr th:first-child {
+          border-top-left-radius: 5px; }
+        body main .table-container .table-wrapper table thead tr th:last-child {
+          border-top-right-radius: 5px; }
+      body main .table-container .table-wrapper table tbody {
+        background-color: white;
+        height: 165px;
+        font-size: 14px;
+        border-top: 3px solid #e5e6e6; }
+        body main .table-container .table-wrapper table tbody tr {
+          border-bottom: 1px solid #e5e6e6; }
+          body main .table-container .table-wrapper table tbody tr:last-child td:first-child {
+            border-bottom-left-radius: 5px; }
+          body main .table-container .table-wrapper table tbody tr:last-child td:last-child {
+            border-bottom-right-radius: 5px; }
+          body main .table-container .table-wrapper table tbody tr td {
+            padding: 12px 10px; }
+            body main .table-container .table-wrapper table tbody tr td:not(:first-child) {
+              border-left: 1px solid #e5e6e6; }
+            body main .table-container .table-wrapper table tbody tr td:last-child {
+              width: 270px; }
   body footer {
     font-size: 13px;
     height: 350px;
-    margin-top: 50px;
+    margin-top: 22px;
     background-color: #76c7c0;
     color: white;
     position: relative; }
