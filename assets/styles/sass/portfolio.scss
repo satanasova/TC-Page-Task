@@ -1,24 +1,26 @@
 @import 'variables.scss';
 
 .portfolio-container {
-    
+
     .portfolio-item {
         margin-top: 37px;
         max-height: 270px;
         position: relative;
-        // overflow: hidden;
+        overflow: hidden;
         border-radius: 5px;
         box-shadow: $gray-shadow;
-        &:hover {
-            .portfolio-overlay{
-               opacity: 1;
-            }
-        }
+
         img {
             max-width: 100%;
-            // max-height: 100%;
         }
-        .portfolio-overlay {   
+
+        &:hover {
+            .portfolio-overlay {
+                opacity: 1;
+            }
+        }
+
+        .portfolio-overlay {
             opacity: 0;
             position: absolute;
             display: flex;
@@ -34,23 +36,25 @@
             width: 100%;
             padding-top: 55px;
             transition: all 0.6s ease;
-            
+
             i {
                 width: 40px;
                 height: 40px;
                 font-size: 25px;
                 border-radius: 5px;
-                margin:5px;
+                margin: 5px;
                 padding-top: 7px;
                 text-align: center;
                 transition: all 0.4s ease;
                 background-color: $green-darker;
                 cursor: pointer;
+
                 &:hover {
                     background-color: $red-darker;
                 }
             }
         }
+
         span {
             text-transform: capitalize;
             font-size: 16px;
@@ -59,10 +63,38 @@
 }
 
 @media (max-width: 1024px) {
-    body {
-        .wrapper {
-            padding: 0 20px;
+    .portfolio-container {
+        .portfolio-item {
+            .portfolio-overlay {
+                justify-content: space-around;
+
+                i {
+                    width: 35px;
+                    height: 35px;
+                    font-size: 20px;
+                }
+            }
         }
     }
-      
-  }
+}
+
+@media (max-width: 767px) {
+    .portfolio-container {
+        .portfolio-item {
+            .portfolio-overlay {
+                padding-bottom: 20%;
+                justify-content: space-around;
+
+                i {
+                    width: 30px;
+                    height: 30px;
+                    font-size: 15px;
+                }
+
+                span {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

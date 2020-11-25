@@ -15,11 +15,14 @@ function searchBtn() {
 
     document.addEventListener('click', event => {
         const searchClicked = event.target.matches('#search-button, #search-button a, #search-button i');
+        const inputClicked = event.target.matches('#search-box *');
 
         if (searchClicked) {
             searchBox.classList.toggle('active');
         } else {
-            searchBox.classList.remove('active');
+            if (!inputClicked) {
+                searchBox.classList.remove('active');
+            }
         }
     })
 }

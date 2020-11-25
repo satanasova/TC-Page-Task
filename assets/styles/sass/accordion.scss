@@ -2,6 +2,7 @@
 
 .accordion-container {
     margin-top: 110px;
+
     .acc-wrapper {
         .acc-item {
             background-color: $gray-primary;
@@ -16,7 +17,7 @@
             cursor: pointer;
 
             .fa-minus-circle {
-                display:none;
+                display: none;
             }
 
             &.active {
@@ -24,19 +25,44 @@
                 height: 120px;
 
                 .fa-minus-circle {
-                    display:block;
+                    display: block;
                 }
 
                 .fa-plus-circle {
                     display: none;
                 }
             }
+
             .title {
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 22px;
+
                 i {
                     font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .accordion-container {
+        justify-content: center;
+
+        .acc-wrapper {
+            width: 100%;
+            margin-top: 50px;
+
+            .acc-item {
+                &.active {
+                    .title {
+                        margin-bottom: 5px;
+                    }
+
+                    p {
+                        margin-right: 18px;
+                    }
                 }
             }
         }

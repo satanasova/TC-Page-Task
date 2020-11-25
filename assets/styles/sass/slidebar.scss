@@ -3,24 +3,28 @@
 .slidebar-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin-top: 50px;
-    #project-slideshow-wrapper, #page-slideshow-wrapper {
+
+    #project-slideshow-wrapper,
+    #page-slideshow-wrapper {
         position: relative;
-        button{
-            width: 50px;
-            height: 57px;
+
+        button {
             top: calc(50%);
-            transform: translateY(-50%);
+            transform: translateY(-92%);
+
             i {
                 font-size: 40px;
             }
         }
     }
+
     .slidebar {
         text-align: center;
         position: relative;
         overflow: hidden;
+
         .slider {
             display: flex;
             overflow: hidden;
@@ -32,22 +36,28 @@
                 max-width: 100%;
             }
         }
+
         button {
             color: white;
             box-shadow: $red-shadow;
             position: absolute;
+
             &.prev {
+                padding: 7px 16px 7px 10px;
                 background-color: $red-primary;
                 border-radius: 0 4px 4px 0;
-                box-shadow: $red-shadow;              
+                box-shadow: $red-shadow;
             }
+
             &.next {
+                padding: 7px 10px 7px 16px;
                 background-color: $red-primary;
                 right: 0;
                 border-radius: 4px 0px 0 4px;
-                box-shadow: $red-shadow;              
+                box-shadow: $red-shadow;
             }
         }
+
         .slidebar-nav-item {
             cursor: pointer;
             height: 5px;
@@ -56,62 +66,79 @@
             margin: 0 5px;
             background-color: #b0b8b9;
             transition: background-color 0.4s ease;
-            &:hover, &.active {
+
+            &:hover,
+            &.active {
                 background-color: $red-darker;
             }
-        } 
+        }
     }
+
     .small-sliders {
         width: 100%;
-        margin-top: 35px;
+        margin-top: 55px;
         display: flex;
-        justify-content: space-between;  
+        justify-content: space-between;
+
         .slidebar {
             max-width: 870px;
+
             .page-slideshow {
                 max-width: 870px;
-                max-height: 565px;        
+                max-height: 565px;
             }
         }
+
         .aside-container {
             width: 270px;
+
             .slidebar {
                 max-width: 270px;
+
                 .sidebar-slideshow {
                     height: 200px;
                     margin-bottom: 17px;
+
                     button {
-                        width: 40px;
-                        height: 38px;
-                        top: calc(50% - 38px);
+                        top: calc(50%);
+                        transform: translateY(-92%);
+
                         &.prev {
+                            padding: 6px 17px 4px 12px;
                             background-color: $red-primary;
-                        } 
+                        }
+
                         &.next {
+                            padding: 6px 12px 4px 17px;
                             background-color: $red-primary;
-                            right: 0;             
-                        }  
+                            right: 0;
+                        }
+
                         i {
                             font-size: 30px;
                             font-weight: bold;
-                        }                  
-                    }      
-                }  
+                        }
+                    }
+                }
+
                 .slider-nav {
                     .slidebar-nav-item {
                         width: 30px;
-                    } 
-                }                
-            }  
-                
+                    }
+                }
+            }
+
             .sidebar-gallery {
                 max-width: 270px;
+
                 h2 {
                     margin-bottom: 20px;
                     margin-top: 40px;
                 }
+
                 .gallery {
                     padding-top: 7px;
+
                     img {
                         width: 26%;
                         margin-bottom: 25px;
@@ -121,7 +148,6 @@
                 }
             }
         }
-
     }
 }
 
@@ -130,25 +156,80 @@
         .small-sliders {
             flex-direction: column;
             align-items: center;
-            .slidebar, .aside-container {
+
+            .slidebar,
+            .aside-container {
                 margin-top: 30px;
             }
+
             .aside-container {
                 width: 100%;
                 display: flex;
                 align-items: flex-end;
                 justify-content: space-evenly;
+
                 .sidebar-gallery {
                     text-align: center;
+
                     h2 {
                         margin-bottom: 30px;
                         margin-top: 30px;
                     }
                 }
             }
-            
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .slidebar-container {
+
+        #project-slideshow-wrapper,
+        #page-slideshow-wrapper {
+            button {
+                padding: 4px 7px;
+
+                i {
+                    font-size: 30px
+                }
+            }
+
+            .slidebar-nav-item {
+                width: 30px;
+            }
         }
 
+        .small-sliders {
+            flex-direction: column;
+            align-items: center;
+
+            .slidebar,
+            .aside-container {
+                margin-top: 30px;
+            }
+
+            .aside-container {
+                flex-direction: column;
+                align-items: center;
+
+                #sidebar-slideshow-wrapper {
+
+                    button {
+                        &.prev {
+                            padding: 0px 12px 0 7px;
+                        }
+
+                        &.next {
+                            padding: 0px 7px 0 12px;
+                        }
+
+                        i {
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
     }
-      
 }

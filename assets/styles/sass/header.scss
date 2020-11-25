@@ -3,24 +3,25 @@
 header {
     width: 100%;
     position: relative;
+
     &:after {
         content: "";
         height: 9px;
         width: 100%;
         background-image: url(../images/ruler-header.png);
         position: absolute;
-        top: 71px; 
+        bottom: 80px;
     }
+
     nav {
         padding: 22px 0;
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
         background-color: $green-primary;
+
         .wrapper {
             display: flex;
             justify-content: space-between;
+
             .nav-items {
                 list-style: none;
                 display: flex;
@@ -29,35 +30,45 @@ header {
                 font-size: 13px;
                 font-weight: 400;
                 text-transform: uppercase;
+
                 li {
                     border-radius: 5px;
+
                     &:not(:last-child) {
                         padding: 10px 22px 0px 22px;
                         transition: background-color 0.4s ease;
                         margin-right: 8px;
-                        &:hover, &.active {
+
+                        &:hover,
+                        &.active {
                             background-color: #62a29e;
                             box-shadow: 0 4px #528b86;
                             cursor: pointer;
                         }
                     }
+
                     &#search-button {
                         text-align: center;
                         background-color: $red-primary;
                         box-shadow: $red-shadow;
                         position: relative;
                         padding: 9px 10px 0px 10px;
+
                         &:hover {
                             cursor: pointer;
                         }
+
                         i {
                             font-size: 16px;
                         }
+
                         #search-box {
                             &.active {
                                 display: block;
                             }
+
                             display: none;
+
                             &:before {
                                 content: "";
                                 position: absolute;
@@ -67,6 +78,7 @@ header {
                                 border-left: 7px solid transparent;
                                 border-right: 7px solid transparent;
                             }
+
                             #search-box-input {
                                 font-size: 14px;
                                 font-family: Myriad Pro, sans-serif;
@@ -79,30 +91,35 @@ header {
                                 outline: none;
                                 padding: 8px 11px;
                             }
-                    
+
                         }
                     }
+
                     &#portfolio {
                         white-space: nowrap;
+
                         i {
                             color: white;
                             position: relative;
                             left: -2px;
-                            
+
                         }
                     }
                 }
             }
         }
     }
+
     .page-headline {
         align-items: center;
         padding: 28px 0;
         background-color: #ececec;
+
         .wrapper {
             position: relative;
             display: flex;
             justify-content: space-between;
+
             &:after {
                 content: "";
                 position: absolute;
@@ -110,23 +127,26 @@ header {
                 top: 100%;
                 border-top: 12px solid #ececec;
                 border-left: 12px solid transparent;
-                border-right: 12px solid transparent;    
+                border-right: 12px solid transparent;
             }
+
             h1 {
                 font-size: 20px;
                 font-weight: 600;
                 text-transform: uppercase;
                 padding-left: 5px;
             }
+
             p {
                 font-size: 12px;
                 text-transform: capitalize;
                 padding: 5px 5px 5px 0;
+
                 span:nth-child(2) {
                     margin: 0 5px;
                 }
             }
-    
+
         }
     }
 }
@@ -134,33 +154,65 @@ header {
 @media (max-width: 1050px) {
     header {
         nav {
-            justify-content: center;
-            padding-bottom: 20px;
+            .wrapper {
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .nav-items {
+                    li {
+                        &#search-button {
+                            padding-bottom: 6px;
+                        }
+                    }
+                }
+
+            }
         }
-        
+
     }
-      
+
 }
 
-@media (max-width: 790px) {
+@media (max-width: 840px) {
     header {
         nav {
-            padding-bottom: 10px;
-            .logo {
-                span:first-child {
-                    font-size: 25px;
+            .wrapper {
+                .logo {
+                    span:first-child {
+                        font-size: 25px;
+                    }
+
+                    span:nth-child(2) {
+                        font-size: 20px;
+                    }
                 }
-                span:nth-child(2) {
-                    font-size: 20px;
-    
+
+                .nav-items {
+                    justify-content: center;
+                    padding: 10px 22px;
+
+                    li {
+                        &:not(:last-child) {
+
+                            font-size: 12px;
+                            padding-bottom: 5px;
+                        }
+
+                        &#search-button {
+                            position: fixed;
+                            z-index: 2;
+                            right: 22px;
+                            top: 25px;
+                            padding: 6px 9px 4px 9px;
+
+                            i {
+                                font-size: 14px;
+                            }
+                        }
+                    }
                 }
-            }
-            .nav-items {
-                font-size: 12px;
             }
         }
-    
-        
     }
-      
+
 }

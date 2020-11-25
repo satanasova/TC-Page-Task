@@ -1,7 +1,8 @@
 @import 'variables.scss';
 
 .infobox-container {
-    margin-top: 30px;
+    margin-top: 52px;
+
     .infobox-card {
         height: 310px;
         text-align: center;
@@ -11,29 +12,36 @@
         border-radius: 4px;
         box-shadow: $gray-shadow;
         transition: background-color 0.4s ease;
+
         &:hover {
             background-color: white;
+
             & i {
                 color: $red-primary;
             }
-            & button{
+
+            & button {
                 background-color: $red-primary;
                 box-shadow: $red-shadow;
             }
         }
+
         i {
             color: $green-primary;
             font-size: 60px;
             transition: color 0.4s ease;
         }
+
         h2 {
             margin-top: 12px;
             margin-bottom: 27px;
         }
+
         p {
             font-size: 12px;
             line-height: 1.6;
         }
+
         button {
             font-size: 14px;
             position: absolute;
@@ -46,8 +54,18 @@
             background-color: $green-primary;
             box-shadow: $green-shadow;
             transition: all 0.4s ease;
+        }
+    }
+}
 
-            
+@media (max-width: 1024px) {
+    .infobox-container {
+        padding: 0px 80px;
+        justify-content: space-around;
+
+        .infobox-card {
+            min-width: 270px;
+            margin-top: 60px;
         }
     }
 }
