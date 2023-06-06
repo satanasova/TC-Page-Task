@@ -8,7 +8,7 @@ function accordion(elementId) {
     const accItems = Array.from(accWrapper.querySelectorAll('.acc-item'));
 
     accWrapper.addEventListener('click', event => {
-        const clickedAcc = event.path.find(el => el.classList.contains('acc-item'))
+        const clickedAcc = event.target.closest('.acc-item')
 
         if(!accItems.includes(clickedAcc)){
             return;
