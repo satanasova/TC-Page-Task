@@ -585,6 +585,8 @@ body {
   body main .table-container {
     height: 520px;
     margin-top: 55px; }
+    body main .table-container .table-wrapper {
+      overflow: hidden; }
     body main .table-container .table-wrapper:first-child table thead {
       background-color: #ececec; }
       body main .table-container .table-wrapper:first-child table thead tr th:nth-child(3) {
@@ -640,7 +642,8 @@ body {
     margin-top: 22px;
     background-color: #76c7c0;
     color: white;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     body footer:before {
       content: "";
       height: 19px;

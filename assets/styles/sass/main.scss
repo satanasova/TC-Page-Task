@@ -189,6 +189,7 @@ body {
             margin-top: 55px;
 
             .table-wrapper {
+                overflow: hidden;
                 &:first-child {
                     table {
                         thead {
